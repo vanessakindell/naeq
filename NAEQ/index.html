@@ -1,12 +1,12 @@
 <html>
 <head>
-<title>New Aeon English Qabalah Extended</title>
+<title>The Book of the Law using New Aeon English Qabalah</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
 </head>
 <body style="opacity:0">
-<br><h1 style="text-align:center;">New Aeon English Qabalah Extended v2.2</h1>
+<br><h1 style="text-align:center;">The Book of the Law using New Aeon English Qabalah v2.2</h1>
 <noscript>JavaScript Required</noscript>
 <div class="top" id="head">
 <form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
@@ -15,12 +15,8 @@
 <hr>
 <div><dt>LA Matches</dt><dd id="lacount">0</dd></div>
 <div><dt>LB Matches</dt><dd id="lbcount">0</dd></div>
-<div><dt>DF Matches</dt><dd id="dfcount">0</dd></div>
-<!--<div><dt>IA Matches</dt><dd id="iacount">0</dd></div>-->
 <div class="out"><strong>Liber Al Vel Legis</strong><div><ol id="lamatch">N/A</ol></div></div>
 <div class="out"><strong>Liber 49</strong><div><ol id="lbmatch">N/A</ol></div></div>
-<div class="out"><strong>Daughter of Fortitude</strong><div><ol id="dfmatch">N/A</ol></div></div>
-<!--<div class="out"><strong>Inanna's Address</strong><div><ol id="iamatch">N/A</ol></div></div>-->
 </dl>
 <nav>
 	<a href="../"> <span>Hub</span></a>
@@ -48,32 +44,32 @@
 	i { font-style:initial; vertical-align:2px; }
 	strong { font-weight: 100; padding-bottom: 4px; border-bottom: 1px solid #000; line-height: 60px; }
 	::selection { background:rgba(0,0,0,255); color:#fff; }
-	nav a { 
-		display:inline-block; 
+	nav a {
+		display:inline-block;
 		width:18px;
 		width:150px;
-		border:1px solid #000; 
-		outline:none !important; 
-		color:#000; 
-		text-decoration:none; 
-		text-align:center; 
-		background:#fff; 
-		padding:10px 17px; 
-		vertical-align:middle; 
-		border-radius:6px; 
+		border:1px solid #000;
+		outline:none !important;
+		color:#000;
+		text-decoration:none;
+		text-align:center;
+		background:#fff;
+		padding:10px 17px;
+		vertical-align:middle;
+		border-radius:6px;
 		margin:20px 24px 0 0;
 		box-shadow:0 0 14px 14px #fff;
 		user-select: none;
 	}
-	li { 
-		text-align:left; color:#000; 
-		margin-left:2em; 
-		padding:4px 1em; 
+	li {
+		text-align:left; color:#000;
+		margin-left:2em;
+		padding:4px 1em;
 		list-style-type:decimal-leading-zero;
 		font-size:17px;
-		margin-bottom:3px; 
-		border: 1px solid rgba(255, 255, 255, 0); 
-		transition:border 400ms ease; 
+		margin-bottom:3px;
+		border: 1px solid rgba(255, 255, 255, 0);
+		transition:border 400ms ease;
 		border-radius:6px;
 	}
 	noscript, .no-js {
@@ -126,13 +122,13 @@ input.oninput = function() {
 	else
 		window.history.pushState('','', window.location.protocol + "//" + window.location.host + window.location.pathname);
 
-	Object.keys(cipher).forEach(function(key) { a += ((input.value).split(key).length - 1)*cipher[key]; }); 
-	
+	Object.keys(cipher).forEach(function(key) { a += ((input.value).split(key).length - 1)*cipher[key]; });
+
 	if (/\d/.test(input.value))
 		a += ((input.value)).match(/\d+/g).map(Number).reduce(function(b, c) { return b + c; }, 0);
-	
+
 	result.innerHTML = a;
-	
+
 	/* AL */
 	textset = liberal.split(" ");
     matchescount = 0;
@@ -162,7 +158,7 @@ input.oninput = function() {
                     } else if(testchar == parseInt(testchar)) {
                         testweight = parseInt(testweight) + parseInt(testchar);
                     } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
-                }                
+                }
                 teststrval = parseInt(teststrval) + parseInt(testweight);
                 teststr = teststr + " " + testword;
                 if(teststrval==a) {
@@ -175,12 +171,12 @@ input.oninput = function() {
 	if (matchescount !== 0) {
 	    lacount.innerHTML = matchescount;
 	    lamatch.innerHTML = outputmatch;
-	        
+
 	} else {
-	    lacount.innerHTML = 0;  
+	    lacount.innerHTML = 0;
 		lamatch.innerHTML = "N/A";
 	}
-	
+
 	/* IA */	/*
     textset = inannasaddress.split(" ");
     matchescount = 0;
@@ -210,7 +206,7 @@ input.oninput = function() {
                     } else if(testchar == parseInt(testchar)) {
                         testweight = parseInt(testweight) + parseInt(testchar);
                     } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
-                }                
+                }
                 teststrval = parseInt(teststrval) + parseInt(testweight);
                 teststr = teststr + " " + testword;
                 if(teststrval==a) {
@@ -223,12 +219,12 @@ input.oninput = function() {
 	if (matchescount !== 0) {
 	    iacount.innerHTML = matchescount;
 	    iamatch.innerHTML = outputmatch;
-	        
+
 	} else {
-	    iacount.innerHTML = 0;  
+	    iacount.innerHTML = 0;
 		iamatch.innerHTML = "N/A";
 	}*/
-	
+
 	/* LB */
 	textset = liberbabalon.split(" ");
     matchescount = 0;
@@ -258,7 +254,7 @@ input.oninput = function() {
                     } else if(testchar == parseInt(testchar)) {
                         testweight = parseInt(testweight) + parseInt(testchar);
                     } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
-                }                
+                }
                 teststrval = parseInt(teststrval) + parseInt(testweight);
                 teststr = teststr + " " + testword;
                 if(teststrval==a) {
@@ -271,61 +267,13 @@ input.oninput = function() {
 	if (matchescount !== 0) {
 	    lbcount.innerHTML = matchescount;
 	    lbmatch.innerHTML = outputmatch;
-	        
+
 	} else {
-	    lbcount.innerHTML = 0;  
+	    lbcount.innerHTML = 0;
 		lbmatch.innerHTML = "N/A";
 	}
-	/* DF */
-	textset = daughterfortitude.split(" ");
-    matchescount = 0;
-    outputmatch = "";
-    teststr = "";
-    testword = "";
-    testchar = "";
-    teststrval = 0;
-    testweight = 0;
-    if(a!==0) {
-        for(textpos=0;textpos<textset.length;textpos++) {
-            teststr = "";
-            teststrval = 0;
-            testword = "";
-            if(textpos+10>textset.length) {
-                offend = textset.length;
-            } else {
-                offend = textpos+10;
-            }
-            for(offset=textpos;offset<offend;offset++) {
-                testweight = 0;
-                testword = textset[offset];
-                for(subpos=0;subpos<testword.length;subpos++) {
-                    testchar = testword.substring(subpos,subpos+1);
-                    if(typeof cipher[testchar] !== 'undefined') {
-                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
-                    } else if(testchar == parseInt(testchar)) {
-                        testweight = parseInt(testweight) + parseInt(testchar);
-                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
-                }                
-                teststrval = parseInt(teststrval) + parseInt(testweight);
-                teststr = teststr + " " + testword;
-                if(teststrval==a) {
-                    matchescount++;
-                    outputmatch += "<li>"+teststr+"</li>";
-                }
-            }
-        }
-    }
-	if (matchescount !== 0) {
-	    dfcount.innerHTML = matchescount;
-	    dfmatch.innerHTML = outputmatch;
-	        
-	} else {
-	    dfcount.innerHTML = 0;  
-		dfmatch.innerHTML = "N/A";
-	}
-}
 
-document.body.onload = function() { 
+document.body.onload = function() {
 	input.value = decodeURI(window.location.search).substring(3,128);
 	input.select();
 	input.dispatchEvent(new Event('input'));
