@@ -177,54 +177,6 @@ input.oninput = function() {
 		lamatch.innerHTML = "N/A";
 	}
 
-	/* IA */	/*
-    textset = inannasaddress.split(" ");
-    matchescount = 0;
-    outputmatch = "";
-    teststr = "";
-    testword = "";
-    testchar = "";
-    teststrval = 0;
-    testweight = 0;
-    if(a!==0) {
-        for(textpos=0;textpos<textset.length;textpos++) {
-            teststr = "";
-            teststrval = 0;
-            testword = "";
-            if(textpos+10>textset.length) {
-                offend = textset.length;
-            } else {
-                offend = textpos+10;
-            }
-            for(offset=textpos;offset<offend;offset++) {
-                testweight = 0;
-                testword = textset[offset];
-                for(subpos=0;subpos<testword.length;subpos++) {
-                    testchar = testword.substring(subpos,subpos+1);
-                    if(typeof cipher[testchar] !== 'undefined') {
-                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
-                    } else if(testchar == parseInt(testchar)) {
-                        testweight = parseInt(testweight) + parseInt(testchar);
-                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
-                }
-                teststrval = parseInt(teststrval) + parseInt(testweight);
-                teststr = teststr + " " + testword;
-                if(teststrval==a) {
-                    matchescount++;
-                    outputmatch += "<li>"+teststr+"</li>";
-                }
-            }
-        }
-    }
-	if (matchescount !== 0) {
-	    iacount.innerHTML = matchescount;
-	    iamatch.innerHTML = outputmatch;
-
-	} else {
-	    iacount.innerHTML = 0;
-		iamatch.innerHTML = "N/A";
-	}*/
-
 	/* LB */
 	textset = liberbabalon.split(" ");
     matchescount = 0;
@@ -270,8 +222,9 @@ input.oninput = function() {
 
 	} else {
 	    lbcount.innerHTML = 0;
-		lbmatch.innerHTML = "N/A";
+			lbmatch.innerHTML = "N/A";
 	}
+}
 
 document.body.onload = function() {
 	input.value = decodeURI(window.location.search).substring(3,128);
