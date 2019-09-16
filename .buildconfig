@@ -1,0 +1,10 @@
+[default]
+name=Default
+runtime=host
+config-opts=
+run-opts=
+prefix=/home/vanessakindell/.cache/gnome-builder/install/nagce/host
+app-id=
+postbuild=
+prebuild=
+default=true
