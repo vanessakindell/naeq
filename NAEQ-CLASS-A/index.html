@@ -19,6 +19,10 @@
 <div><dt>XVII Matches</dt><dd id="xviicount">0</dd></div>
 <div><dt>LXV Matches</dt><dd id="lxvcount">0</dd></div>
 <div><dt>LXVI Matches</dt><dd id="lxvicount">0</dd></div>
+<div><dt>XC Matches</dt><dd id="xccount">0</dd></div>
+<div><dt>CLVI Matches</dt><dd id="clvicount">0</dd></div>
+<div><dt>CCCLXX Matches</dt><dd id="ccclxxcount">0</dd></div>
+<div><dt>DLXX Matches</dt><dd id="dlxxcount">0</dd></div>
 
 <div class="out"><strong>Liber B vel Magi</strong><div><ol id="imatch">N/A</ol></div></div>
 <div class="out"><strong>Liberi vel Lapidis Lazuli</strong><div><ol id="viimatch">N/A</ol></div></div>
@@ -26,6 +30,10 @@
 <div class="out"><strong>Liber Trigrammaton</strong><div><ol id="xviimatch">N/A</ol></div></div>
 <div class="out"><strong>Liber Cordis Cincti Serpente</strong><div><ol id="lxvmatch">N/A</ol></div></div>
 <div class="out"><strong>Liber Stellæ Rubeæ</strong><div><ol id="lxvimatch">N/A</ol></div></div>
+<div class="out"><strong>Tzaddi vel Hamus Hermeticus</strong><div><ol id="xcmatch">N/A</ol></div></div>
+<div class="out"><strong>Cheth vel Vallum Abiegni</strong><div><ol id="clvimatch">N/A</ol></div></div>
+<div class="out"><strong>A’ash vel Capricorni Pneumatici</strong><div><ol id="ccclxxmatch">N/A</ol></div></div>
+<div class="out"><strong>ARARITA</strong><div><ol id="dlxxmatch">N/A</ol></div></div>
 
 </dl>
 <nav>
@@ -425,6 +433,198 @@ input.oninput = function() {
 	} else {
 	  lxvicount.innerHTML = 0;
 		lxvimatch.innerHTML = "N/A";
+	}
+
+	/* XC */
+	  textset = liberxc.split(" ");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                teststr = teststr + " " + testword;
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    xccount.innerHTML = matchescount;
+	    xcmatch.innerHTML = outputmatch;
+
+	} else {
+	  xccount.innerHTML = 0;
+		xcmatch.innerHTML = "N/A";
+	}
+
+	/* CLVI */
+	  textset = liberclvi.split(" ");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                teststr = teststr + " " + testword;
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    clvicount.innerHTML = matchescount;
+	    clvimatch.innerHTML = outputmatch;
+
+	} else {
+	  clvicount.innerHTML = 0;
+		clvimatch.innerHTML = "N/A";
+	}
+
+	/* CCCLXX */
+	  textset = liberccclxx.split(" ");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                teststr = teststr + " " + testword;
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    ccclxxcount.innerHTML = matchescount;
+	    ccclxxmatch.innerHTML = outputmatch;
+
+	} else {
+	  ccclxxcount.innerHTML = 0;
+		ccclxxmatch.innerHTML = "N/A";
+	}
+
+	/* DLXX */
+	  textset = liberdlxx.split(" ");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                teststr = teststr + " " + testword;
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    dlxxcount.innerHTML = matchescount;
+	    dlxxmatch.innerHTML = outputmatch;
+
+	} else {
+	  dlxxcount.innerHTML = 0;
+		dlxxmatch.innerHTML = "N/A";
 	}
 }
 
