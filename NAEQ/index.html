@@ -13,10 +13,10 @@
 <dl>
 <div><dt>NAEQ Sum</dt><dd id="result">0</dd></div>
 <hr>
-<div><dt>LA Matches</dt><dd id="lacount">0</dd></div>
-<div><dt>LB Matches</dt><dd id="lbcount">0</dd></div>
-<div class="out"><strong>Liber Al Vel Legis</strong><div><ol id="lamatch">N/A</ol></div></div>
-<div class="out"><strong>Liber 49</strong><div><ol id="lbmatch">N/A</ol></div></div>
+<div><dt>CCXX Matches</dt><dd id="ccxxcount">0</dd></div>
+<div><dt>XLIX Matches</dt><dd id="xlixcount">0</dd></div>
+<div class="out"><strong>Liber Al Vel Legis</strong><div><ol id="ccxxmatch">N/A</ol></div></div>
+<div class="out"><strong>Liber Babalon</strong><div><ol id="xlixmatch">N/A</ol></div></div>
 </dl>
 <nav>
 	<a href="../"> <span>Hub</span></a>
@@ -129,8 +129,8 @@ input.oninput = function() {
 
 	result.innerHTML = a;
 
-	/* AL */
-	  textset = liberal.split(" ");
+	/* CCXX */
+	  textset = liberccxx.split(" ");
     matchescount = 0;
     outputmatch = "";
     teststr = "";
@@ -169,16 +169,16 @@ input.oninput = function() {
         }
     }
 	if (matchescount !== 0) {
-	    lacount.innerHTML = matchescount;
-	    lamatch.innerHTML = outputmatch;
+	    ccxxcount.innerHTML = matchescount;
+	    ccxxmatch.innerHTML = outputmatch;
 
 	} else {
-	  lacount.innerHTML = 0;
-		lamatch.innerHTML = "N/A";
+	  ccxxcount.innerHTML = 0;
+		ccxxmatch.innerHTML = "N/A";
 	}
 
-	/* LB */
-	  textset = liberbabalon.split(" ");
+	/* XLIX */
+	  textset = liberxlix.split(" ");
     matchescount = 0;
     outputmatch = "";
     teststr = "";
@@ -217,12 +217,12 @@ input.oninput = function() {
         }
     }
 	if (matchescount !== 0) {
-	    lbcount.innerHTML = matchescount;
-	    lbmatch.innerHTML = outputmatch;
+	    xlixcount.innerHTML = matchescount;
+	    xlixmatch.innerHTML = outputmatch;
 
 	} else {
-	    lbcount.innerHTML = 0;
-			lbmatch.innerHTML = "N/A";
+	    xlixcount.innerHTML = 0;
+			xlixmatch.innerHTML = "N/A";
 	}
 }
 
