@@ -14,7 +14,9 @@
 <div><dt>Runic Cipher Sum</dt><dd id="result">0</dd></div>
 <hr>
 <div><dt>Havamal Matches</dt><dd id="havamalcount">0</dd></div>
+<div><dt>Havamal Runes Matches</dt><dd id="havamalrcount">0</dd></div>
 <div class="out"><strong>Havamal</strong><div><ol id="havamalmatch">N/A</ol></div></div>
+<div class="out"><strong>Havamal in Runes</strong><div><ol id="havamalrmatch">N/A</ol></div></div>
 </dl>
 <nav>
 	<a href="../"> <span>Hub</span></a>
@@ -127,7 +129,7 @@ input.oninput = function() {
 
 	result.innerHTML = a;
 
-	/* CCXX */
+	/* Havamal */
 	  textset = havamal.split(" ");
     matchescount = 0;
     outputmatch = "";
@@ -158,7 +160,14 @@ input.oninput = function() {
                     } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
                 }
                 teststrval = parseInt(teststrval) + parseInt(testweight);
-                teststr = teststr + " " + testword;
+                if(teststr)
+                {
+                  teststr = teststr + " " + testword;
+                }
+                else
+                {
+                  teststr = testword;
+                }
                 if(teststrval==a) {
                     matchescount++;
                     outputmatch += "<li>"+teststr+"</li>";
@@ -173,6 +182,61 @@ input.oninput = function() {
 	} else {
 	  havamalcount.innerHTML = 0;
 		havamalmatch.innerHTML = "N/A";
+	}
+
+  /* Havamal in Runes */
+	  textset = havamalrunes.split("᛬");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                if(teststr)
+                {
+                  teststr = teststr + "᛬" + testword;
+                }
+                else
+                {
+                  teststr = testword;
+                }
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    havamalrcount.innerHTML = matchescount;
+	    havamalrmatch.innerHTML = outputmatch;
+
+	} else {
+	  havamalrcount.innerHTML = 0;
+		havamalrmatch.innerHTML = "N/A";
 	}
 }
 
