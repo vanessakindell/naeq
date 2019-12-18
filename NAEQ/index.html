@@ -17,7 +17,7 @@
 <div><dt>I Matches</dt><dd id="icount">0</dd></div>
 <div><dt>VII Matches</dt><dd id="viicount">0</dd></div>
 <div><dt>X Matches</dt><dd id="xcount">0</dd></div>
-<div><dt>XVII Matches</dt><dd id="xviicount">0</dd></div>
+<div><dt>XXVII Matches</dt><dd id="xxviicount">0</dd></div>
 <div><dt>LXV Matches</dt><dd id="lxvcount">0</dd></div>
 <div><dt>LXVI Matches</dt><dd id="lxvicount">0</dd></div>
 <div><dt>XC Matches</dt><dd id="xccount">0</dd></div>
@@ -29,7 +29,7 @@
 <div class="out"><strong>Liber B vel Magi</strong><div><ol id="imatch">N/A</ol></div></div>
 <div class="out"><strong>Liberi vel Lapidis Lazuli</strong><div><ol id="viimatch">N/A</ol></div></div>
 <div class="out"><strong>Liber Porta Lucis</strong><div><ol id="xmatch">N/A</ol></div></div>
-<div class="out"><strong>Liber Trigrammaton</strong><div><ol id="xviimatch">N/A</ol></div></div>
+<div class="out"><strong>Liber Trigrammaton</strong><div><ol id="xxviimatch">N/A</ol></div></div>
 <div class="out"><strong>Liber Cordis Cincti Serpente</strong><div><ol id="lxvmatch">N/A</ol></div></div>
 <div class="out"><strong>Liber Stellæ Rubeæ</strong><div><ol id="lxvimatch">N/A</ol></div></div>
 <div class="out"><strong>Tzaddi vel Hamus Hermeticus</strong><div><ol id="xcmatch">N/A</ol></div></div>
@@ -308,8 +308,8 @@ input.oninput = function() {
 		xmatch.innerHTML = "N/A";
 	}
 
-	/* XVII */
-	  textset = liberxvii.split(" ");
+	/* XXVII */
+	  textset = liberxxvii.split(" ");
     matchescount = 0;
     outputmatch = "";
     teststr = "";
@@ -355,12 +355,12 @@ input.oninput = function() {
         }
     }
 	if (matchescount !== 0) {
-	    xviicount.innerHTML = matchescount;
-	    xviimatch.innerHTML = outputmatch;
+	    xxviicount.innerHTML = matchescount;
+	    xxviimatch.innerHTML = outputmatch;
 
 	} else {
-	  xviicount.innerHTML = 0;
-		xviimatch.innerHTML = "N/A";
+	  xxviicount.innerHTML = 0;
+		xxviimatch.innerHTML = "N/A";
 	}
 
 	/* LXV */
