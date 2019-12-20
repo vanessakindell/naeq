@@ -1,12 +1,12 @@
 <html>
 <head>
-<title>A∴A∴ Class A Documents using New Aeon English Qabalah</title>
+<title>Search New Aeon English Qabalah</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
 </head>
 <body style="opacity:0">
-<br><h1 style="text-align:center;">A∴A∴ Class A Documents using New Aeon English Qabalah</h1>
+<br><h1 style="text-align:center;">Search New Aeon English Qabalah</h1>
 <noscript>JavaScript Required</noscript>
 <div class="top" id="head">
 <form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
@@ -19,6 +19,7 @@
 <div><dt><input type="checkbox" id="showlibervii"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber VII</dt><dd id="viicount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber X</dt><dd id="xcount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberxxvii"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber XXVII</dt><dd id="xxviicount">0</dd></div>
+<div><dt><input type="checkbox" id="showliberxlix"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber XLIX</dt><dd id="xlixcount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberlxv"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber LXV</dt><dd id="lxvcount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberlxvi"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber LXVI</dt><dd id="lxvicount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberxc"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber XC</dt><dd id="xccount">0</dd></div>
@@ -26,11 +27,14 @@
 <div><dt><input type="checkbox" id="showliberccxx"  onclick="toggleBoxes()" checked style="height:5px;width:5px;">Liber CCXX</dt><dd id="ccxxcount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberccclxx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber CCCLXX</dt><dd id="ccclxxcount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberdlxx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber DLXX</dt><dd id="dlxxcount">0</dd></div>
+<div><dt><input type="checkbox" id="showlibermmmmxcvi"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber MMMMXCVI</dt><dd id="mmmmxcvicount">0</dd></div>
+<div><dt><input type="checkbox" id="showfortianphrases"  onclick="toggleBoxes()" style="height:5px;width:5px;">Fortian Phrases</dt><dd id="fortianphrasescount">0</dd></div>
 
 <div class="out" id="liberi" style="display:none;"><strong>Liber I: B vel Magi</strong><div><ol id="imatch">N/A</ol></div></div>
 <div class="out" id="libervii" style="display:none;"><strong>Liber VII: Liberi vel Lapidis Lazuli</strong><div><ol id="viimatch">N/A</ol></div></div>
 <div class="out" id="liberx" style="display:none;"><strong>Liber X: Liber Porta Lucis</strong><div><ol id="xmatch">N/A</ol></div></div>
 <div class="out" id="liberxxvii" style="display:none;"><strong>Liber XXVII: Trigrammaton</strong><div><ol id="xxviimatch">N/A</ol></div></div>
+<div class="out" id="liberxlix" style="display:none;"><strong>Liber XLIX: Babalon</strong><div><ol id="xlixmatch">N/A</ol></div></div>
 <div class="out" id="liberlxv" style="display:none;"><strong>Liber LXV: Cordis Cincti Serpente</strong><div><ol id="lxvmatch">N/A</ol></div></div>
 <div class="out" id="liberlxvi" style="display:none;"><strong>Liber LXVI Stellæ Rubeæ</strong><div><ol id="lxvimatch">N/A</ol></div></div>
 <div class="out" id="liberxc" style="display:none;"><strong>Liber XC: Tzaddi vel Hamus Hermeticus</strong><div><ol id="xcmatch">N/A</ol></div></div>
@@ -38,6 +42,8 @@
 <div class="out" id="liberccxx" style="display:block;"><strong>Liber CCXX: Al Vel Legis</strong><div><ol id="ccxxmatch">N/A</ol></div></div>
 <div class="out" id="liberccclxx" style="display:none;"><strong>Liber CCCLXX: A’ash vel Capricorni Pneumatici</strong><div><ol id="ccclxxmatch">N/A</ol></div></div>
 <div class="out" id="liberdlxx" style="display:none;"><strong>Liber DLXX: ARARITA</strong><div><ol id="dlxxmatch">N/A</ol></div></div>
+<div class="out" id="libermmmmxcvi" style="display:none;"><strong>Liber MMMMXCVI: Inanna</strong><div><ol id="mmmmxcvimatch">N/A</ol></div></div>
+<div class="out" id="fortianphrases" style="display:none;"><strong>Common Fortian Phrases</strong><div><ol id="fortianphrasesmatch">N/A</ol></div></div>
 
 <script>
 function toggleBoxes() {
@@ -64,6 +70,13 @@ function toggleBoxes() {
   }
   var checkBox = document.getElementById("showliberxxvii");
   var div = document.getElementById("liberxxvii");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showliberxlix");
+  var div = document.getElementById("liberxlix");
   if (checkBox.checked == true){
     div.style.display = "block";
   } else {
@@ -118,9 +131,22 @@ function toggleBoxes() {
   } else {
     div.style.display = "none";
   }
+  var checkBox = document.getElementById("showlibermmmmxcvi");
+  var div = document.getElementById("libermmmmxcvi");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showfortianphrases");
+  var div = document.getElementById("fortianphrases");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
 }
 </script>
-
 </dl>
 <nav>
 	<a href="../"> <span>Hub</span></a>
@@ -182,7 +208,7 @@ function toggleBoxes() {
 		height:40px;
 		text-align:center;
 		background:#fff;
-		font-family:Consolas, monospace;
+		font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 		font-size:19px;
 		letter-spacing:2px;
 		padding:5px 0;
@@ -211,11 +237,12 @@ function toggleBoxes() {
 		from {opacity:0;}
 		to {opacity:1;}
 	}
+
 </style>
 
 <script src="data.js"></script>
 <script>
-  input.oninput = function() {
+input.oninput = function() {
 	a = 0;
 
 	if (input.value !== "")
@@ -441,6 +468,61 @@ function toggleBoxes() {
 	} else {
 	  xxviicount.innerHTML = 0;
 		xxviimatch.innerHTML = "N/A";
+	}
+
+	/* XLIX */
+	textset = liberxlix.split(" ");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                if(teststr)
+                {
+                  teststr = teststr + " " + testword;
+                }
+                else
+                {
+                  teststr = testword;
+                }
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    xlixcount.innerHTML = matchescount;
+	    xlixmatch.innerHTML = outputmatch;
+
+	} else {
+        xlixcount.innerHTML = 0;
+	    xlixmatch.innerHTML = "N/A";
 	}
 
 	/* LXV */
@@ -826,6 +908,116 @@ function toggleBoxes() {
 	} else {
 	  dlxxcount.innerHTML = 0;
 		dlxxmatch.innerHTML = "N/A";
+	}
+
+	/* MMMMXCVI */
+	  textset = libermmmmxcvi.split(" ");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                if(teststr)
+                {
+                  teststr = teststr + " " + testword;
+                }
+                else
+                {
+                  teststr = testword;
+                }
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    mmmmxcvicount.innerHTML = matchescount;
+	    mmmmxcvimatch.innerHTML = outputmatch;
+
+	} else {
+        mmmmxcvicount.innerHTML = 0;
+		mmmmxcvimatch.innerHTML = "N/A";
+	}
+
+	/* Fortian Phrases */
+	textset = fortianphrases.split(" ");
+    matchescount = 0;
+    outputmatch = "";
+    teststr = "";
+    testword = "";
+    testchar = "";
+    teststrval = 0;
+    testweight = 0;
+    if(a!==0) {
+        for(textpos=0;textpos<textset.length;textpos++) {
+            teststr = "";
+            teststrval = 0;
+            testword = "";
+            if(textpos+10>textset.length) {
+                offend = textset.length;
+            } else {
+                offend = textpos+10;
+            }
+            for(offset=textpos;offset<offend;offset++) {
+                testweight = 0;
+                testword = textset[offset];
+                for(subpos=0;subpos<testword.length;subpos++) {
+                    testchar = testword.substring(subpos,subpos+1);
+                    if(typeof cipher[testchar] !== 'undefined') {
+                        testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                    } else if(testchar == parseInt(testchar)) {
+                        testweight = parseInt(testweight) + parseInt(testchar);
+                    } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                teststrval = parseInt(teststrval) + parseInt(testweight);
+                if(teststr)
+                {
+                  teststr = teststr + " " + testword;
+                }
+                else
+                {
+                  teststr = testword;
+                }
+                if(teststrval==a) {
+                    matchescount++;
+                    outputmatch += "<li>"+teststr+"</li>";
+                }
+            }
+        }
+    }
+	if (matchescount !== 0) {
+	    fortianphrasescount.innerHTML = matchescount;
+	    fortianphrasesmatch.innerHTML = outputmatch;
+
+	} else {
+        fortianphrasescount.innerHTML = 0;
+		fortianphrasesmatch.innerHTML = "N/A";
 	}
 }
 
