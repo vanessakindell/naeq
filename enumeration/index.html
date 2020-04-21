@@ -12,7 +12,7 @@
 <dl>
 <div><dt>NAEQ Sum</dt><dd id="result">0</dd></div>
 <hr>
-<div><dt>Matches:</dt><dd id="icount">0</dd></div>
+<div><dt>Matches:</dt><dd id="ccxxcount">0</dd></div>
 
 <div class="out" id="liberccxx" style="display:block;"><strong>Liber CCXX: Al Vel Legis</strong><div><ol id="ccxxmatch">N/A</ol></div></div>
 </dl>
@@ -126,7 +126,7 @@ input.oninput = function() {
 
 	result.innerHTML = a;
 
-	/* CCXX */
+	/* CCXX With Enumeration */
 	  textset = liberccxx.split(" ");
     matchescount = 0;
     outputmatch = "";
@@ -155,6 +155,18 @@ input.oninput = function() {
                     } else if(testchar == parseInt(testchar)) {
                         testweight = parseInt(testweight) + parseInt(testchar);
                     } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                }
+                var testwordasint = parseInt(testword);
+                if(testwordasint==testword)
+                {
+                  if(testword.substring(testword.length-1,length)!=".")
+                  {
+                    testweight = parseInt(testword);
+                  }
+                  else
+                  {
+                    testweight = 0;
+                  }
                 }
                 teststrval = parseInt(teststrval) + parseInt(testweight);
                 if(teststr)
