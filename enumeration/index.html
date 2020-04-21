@@ -156,17 +156,14 @@ input.oninput = function() {
                         testweight = parseInt(testweight) + parseInt(testchar);
                     } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
                 }
-                var testwordasint = parseInt(testword);
-                if(testwordasint==testword)
+                if(parseInt(testword)==testword)
                 {
-                  if(testword.substring(testword.length-1,length)!=".")
-                  {
-                    testweight = parseInt(testword);
-                  }
-                  else
-                  {
-                    testweight = 0;
-                  }
+                  testweight = parseInt(testword);
+                }
+                var testwordasint = parseInt(testword);
+                if(testwordasint.toString()+"."==testword && testword.substring(testword.length-1,testword.length)==".")
+                {
+                  testweight = 0;
                 }
                 teststrval = parseInt(teststrval) + parseInt(testweight);
                 if(teststr)
