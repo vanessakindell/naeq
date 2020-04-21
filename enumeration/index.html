@@ -136,6 +136,8 @@ input.oninput = function() {
     teststrval = 0;
     testweight = 0;
     prevmatch = "";
+    prevoutput = "";
+    outskip = false;
     if(a!==0) {
         for(textpos=0;textpos<textset.length;textpos++) {
             teststr = "";
@@ -181,8 +183,21 @@ input.oninput = function() {
                   {
                     if(teststr.substring(0,prevmatch.length)!=prevmatch)
                     {
-                      matchescount++;
-                      outputmatch += "<li>"+prevmatch+"</li>";
+                      if(prevoutput.length>teststr.length)
+                      {
+                        if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                        {
+                            outskip=true;
+                        }
+                      }
+                      if(!outskip)
+                      {
+                        matchescount++;
+                        outputmatch += "<li>"+prevmatch+"</li>";
+                        prevoutput = prevmatch;
+                        prevmatch="";
+                      }
+                      outskip=false;
                     }
                   }
                   prevmatch = teststr;
@@ -190,10 +205,26 @@ input.oninput = function() {
             }
         }
     }
-  if(prevmatch)
-  {
-    matchescount++;
-    outputmatch += "<li>"+prevmatch+"</li>";
+    if(prevmatch.length>0)
+    {
+      if(teststr.substring(0,prevmatch.length)!=prevmatch)
+      {
+        if(prevoutput.length>teststr.length)
+        {
+          if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+          {
+            outskip=true;
+          }
+        }
+      if(!outskip)
+      {
+        matchescount++;
+        outputmatch += "<li>"+prevmatch+"</li>";
+        prevoutput = prevmatch;
+        prevmatch="";
+      }
+      outskip=false;
+    }
   }
 	if (matchescount !== 0) {
 	    ccxxcount.innerHTML = matchescount;
