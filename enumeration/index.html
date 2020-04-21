@@ -135,6 +135,7 @@ input.oninput = function() {
     testchar = "";
     teststrval = 0;
     testweight = 0;
+    prevmatch = "";
     if(a!==0) {
         for(textpos=0;textpos<textset.length;textpos++) {
             teststr = "";
@@ -174,13 +175,26 @@ input.oninput = function() {
                 {
                   teststr = testword;
                 }
-                if(teststrval==a) {
-                    matchescount++;
-                    outputmatch += "<li>"+teststr+"</li>";
+                if(teststrval==a)
+                {
+                  if(prevmatch.length>0)
+                  {
+                    if(teststr.substring(0,prevmatch.length)!=prevmatch)
+                    {
+                      matchescount++;
+                      outputmatch += "<li>"+prevmatch+"</li>";
+                    }
+                  }
+                  prevmatch = teststr;
                 }
             }
         }
     }
+  if(prevmatch)
+  {
+    matchescount++;
+    outputmatch += "<li>"+prevmatch+"</li>";
+  }
 	if (matchescount !== 0) {
 	    ccxxcount.innerHTML = matchescount;
 	    ccxxmatch.innerHTML = outputmatch;
