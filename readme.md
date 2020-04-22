@@ -6,5 +6,6 @@ greetings, sourceror
 
     It was later fixed up and expanded by me!
     This branch contains only minimal changes to the original leaving out the extra texts.
+    A live version of this branch can be found at http://secretcipher.xyz/minimal/
 
 @vnessymusic
