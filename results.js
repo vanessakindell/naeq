@@ -925,12 +925,12 @@ input.oninput = function() {
         }
     }
 	if (matchescount !== 0) {
-	    fortianphrasescount.innerHTML = matchescount;
-	    fortianphrasesmatch.innerHTML = outputmatch;
+	    forteanphrasescount.innerHTML = matchescount;
+	    forteanphrasesmatch.innerHTML = outputmatch;
 
 	} else {
-        fortianphrasescount.innerHTML = 0;
-		fortianphrasesmatch.innerHTML = "N/A";
+    forteanphrasescount.innerHTML = 0;
+		forteanphrasesmatch.innerHTML = "N/A";
 	}
 }
 
