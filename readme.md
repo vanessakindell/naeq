@@ -10,7 +10,7 @@ greetings, sourceror
 @vnessymusic
 
 
-Changes from original:  
+Changes from upstream:  
 -Adds Greek Isopsephy and Hebrew Gematria support.  
 -Adds limited Latan character set support.  
 -Reduces needed changes in the text.  
