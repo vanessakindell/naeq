@@ -157,6 +157,7 @@ function toggleBoxes() {
   } else {
     div.style.display = "none";
   }
+  input.dispatchEvent(new Event('input'));
 }
 </script>
 </dl>

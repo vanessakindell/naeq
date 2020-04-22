@@ -13,6 +13,8 @@ input.oninput = function() {
 
 	result.innerHTML = a;
 
+var checkBox = document.getElementById("showliberi");
+if (checkBox.checked == true){
 	/* I */
 	  textset = liberi.split(" ");
     matchescount = 0;
@@ -71,7 +73,10 @@ input.oninput = function() {
 	  icount.innerHTML = 0;
 		imatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showlibervii");
+if (checkBox.checked == true){
 	/* VII */
 	  textset = libervii.split(" ");
     matchescount = 0;
@@ -130,7 +135,9 @@ input.oninput = function() {
 	  viicount.innerHTML = 0;
 		viimatch.innerHTML = "N/A";
 	}
-
+}
+var checkBox = document.getElementById("showliberx");
+if (checkBox.checked == true){
 	/* X */
 	  textset = liberx.split(" ");
     matchescount = 0;
@@ -189,7 +196,10 @@ input.oninput = function() {
 	  xcount.innerHTML = 0;
 		xmatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberxxvii");
+if (checkBox.checked == true){
 	/* XXVII */
 	  textset = liberxxvii.split(" ");
     matchescount = 0;
@@ -248,7 +258,10 @@ input.oninput = function() {
 	  xxviicount.innerHTML = 0;
 		xxviimatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberxlix");
+if (checkBox.checked == true){
 	/* XLIX */
 	textset = liberxlix.split(" ");
     matchescount = 0;
@@ -307,7 +320,10 @@ input.oninput = function() {
         xlixcount.innerHTML = 0;
 	    xlixmatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberlxv");
+if (checkBox.checked == true){
 	/* LXV */
 	  textset = liberlxv.split(" ");
     matchescount = 0;
@@ -366,7 +382,10 @@ input.oninput = function() {
 	  lxvcount.innerHTML = 0;
 		lxvmatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberlxvi");
+if (checkBox.checked == true){
 	/* LXVI */
 	  textset = liberlxvi.split(" ");
     matchescount = 0;
@@ -425,7 +444,10 @@ input.oninput = function() {
 	  lxvicount.innerHTML = 0;
 		lxvimatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberxc");
+if (checkBox.checked == true){
 	/* XC */
 	  textset = liberxc.split(" ");
     matchescount = 0;
@@ -484,6 +506,10 @@ input.oninput = function() {
 	  xccount.innerHTML = 0;
 		xcmatch.innerHTML = "N/A";
 	}
+}
+
+var checkBox = document.getElementById("showliberclvi");
+if (checkBox.checked == true){
 
 	/* CLVI */
 	  textset = liberclvi.split(" ");
@@ -543,7 +569,10 @@ input.oninput = function() {
 	  clvicount.innerHTML = 0;
 		clvimatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberccxx");
+if (checkBox.checked == true){
 	/* CCXX */
 	  textset = liberccxx.split(" ");
     matchescount = 0;
@@ -649,7 +678,10 @@ input.oninput = function() {
 	  ccxxcount.innerHTML = 0;
 		ccxxmatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showenumeration");
+if (checkBox.checked == true){
 	/* CCXX + Extra */
 	  textset = enumeration.split(" ");
     matchescount = 0;
@@ -755,7 +787,10 @@ input.oninput = function() {
 	  enumerationcount.innerHTML = 0;
 		enumerationmatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberccclxx");
+if (checkBox.checked == true){
 	/* CCCLXX */
 	  textset = liberccclxx.split(" ");
     matchescount = 0;
@@ -814,7 +849,10 @@ input.oninput = function() {
 	  ccclxxcount.innerHTML = 0;
 		ccclxxmatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showliberdlxx");
+if (checkBox.checked == true){
 	/* DLXX */
 	  textset = liberdlxx.split(" ");
     matchescount = 0;
@@ -873,7 +911,10 @@ input.oninput = function() {
 	  dlxxcount.innerHTML = 0;
 		dlxxmatch.innerHTML = "N/A";
 	}
+}
 
+var checkBox = document.getElementById("showforteanphrases");
+if (checkBox.checked == true){
 	/* Fortian Phrases */
 	textset = fortianphrases.split(" ");
     matchescount = 0;
@@ -932,6 +973,7 @@ input.oninput = function() {
     forteanphrasescount.innerHTML = 0;
 		forteanphrasesmatch.innerHTML = "N/A";
 	}
+}
 }
 
 document.body.onload = function() {
