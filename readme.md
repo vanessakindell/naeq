@@ -12,6 +12,7 @@ greetings, sourceror
 
 Changes from original:  
 -Adds Greek Isopsephy and Hebrew Gematria support.  
+-Adds limited Latan character set support.  
 -Reduces needed changes in the text.  
 -Adds additional texts to search.  
 -Adds real-time text parsing  
