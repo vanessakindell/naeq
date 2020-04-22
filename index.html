@@ -28,7 +28,7 @@
 
 <div><dt><input type="checkbox" id="showliberccclxx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber CCCLXX</dt><dd id="ccclxxcount">0</dd></div>
 <div><dt><input type="checkbox" id="showliberdlxx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber DLXX</dt><dd id="dlxxcount">0</dd></div>
-<div><dt><input type="checkbox" id="showfortianphrases"  onclick="toggleBoxes()" style="height:5px;width:5px;">Fortian Phrases</dt><dd id="fortianphrasescount">0</dd></div>
+<div><dt><input type="checkbox" id="showForteanphrases"  onclick="toggleBoxes()" style="height:5px;width:5px;">Fortean Phrases</dt><dd id="Forteanphrasescount">0</dd></div>
 
 <div class="out" id="liberi" style="display:none;"><strong>Liber I: B vel Magi</strong><div><ol id="imatch">N/A</ol></div></div>
 <div class="out" id="libervii" style="display:none;"><strong>Liber VII: Liberi vel Lapidis Lazuli</strong><div><ol id="viimatch">N/A</ol></div></div>
@@ -43,7 +43,7 @@
 <div class="out" id="enumeration" style="display:none;"><strong>Liber CCXX: Al Vel Legis + Extra</strong><div><ol id="enumerationmatch">N/A</ol></div></div>
 <div class="out" id="liberccclxx" style="display:none;"><strong>Liber CCCLXX: A’ash vel Capricorni Pneumatici</strong><div><ol id="ccclxxmatch">N/A</ol></div></div>
 <div class="out" id="liberdlxx" style="display:none;"><strong>Liber DLXX: ARARITA</strong><div><ol id="dlxxmatch">N/A</ol></div></div>
-<div class="out" id="fortianphrases" style="display:none;"><strong>Common Fortian Phrases</strong><div><ol id="fortianphrasesmatch">N/A</ol></div></div>
+<div class="out" id="Forteanphrases" style="display:none;"><strong>Common Fortean Phrases</strong><div><ol id="Forteanphrasesmatch">N/A</ol></div></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -150,8 +150,8 @@ function toggleBoxes() {
   } else {
     div.style.display = "none";
   }
-  var checkBox = document.getElementById("showfortianphrases");
-  var div = document.getElementById("fortianphrases");
+  var checkBox = document.getElementById("showForteanphrases");
+  var div = document.getElementById("Forteanphrases");
   if (checkBox.checked == true){
     div.style.display = "block";
   } else {
