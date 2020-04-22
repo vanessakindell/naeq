@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>NAEQ</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
 </head>
@@ -11,24 +12,50 @@
 <dl>
 <div><dt>NAEQ Sum</dt><dd id="result">0</dd></div>
 <hr>
-<div><dt>Matches</dt><dd id="count">0</dd></div>
-<div class="out"><strong>Results</strong><div><ol id="match">N/A</ol></div></div>
-</dl>
+<div><dt>Matches  <input type="checkbox" id="showextras"  onclick="toggleBoxes()" style="height:5px;width:5px;"> Extra</dt><div id="showresultscount"  style="display:inline;"><dd id="count">0</dd></div><div id="showextrascount" style="display:none;"><dd id="extrascount">0</dd></div></div>
+
+
+<div class="out" id="showresults" style="display:block;"><strong>Results</strong><div><ol id="match">N/A</ol></div></div>
+<div class="out" id="extrasresults" style="display:none;"><strong>Results</strong><div><ol id="extrasmatches">N/A</ol></div></div>
+
 <nav>
 	<a href="about">? <span>What is This</span></a>
 	<a href="https://liminalroom.com/"><i>Q</i> <span>Liminal Room</span></a>
 </nav>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   toggleBoxes();
+}, false);
+function toggleBoxes() {
+  var checkBox = document.getElementById("showextras");
+  var divR = document.getElementById("showresults");
+  var divE = document.getElementById("extrasresults");
+  var divRC = document.getElementById("showresultscount");
+  var divEC = document.getElementById("showextrascount");
+  if (checkBox.checked == true){
+    divR.style.display = "none";
+    divE.style.display = "block";
+    divRC.style.display = "none";
+    divEC.style.display = "inline";
+  } else {
+    divR.style.display = "block";
+    divE.style.display = "none";
+    divRC.style.display = "inline";
+    divEC.style.display = "none";
+  }
+  input.dispatchEvent(new Event('input'));
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <style>
-	html { overflow-y:scroll; font-family:Lato; }
+	html { overflow-y:scroll; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; }
 	html, body { margin:0; padding:0; animation:fade-in 800ms normal forwards; position:relative; background:#fff; }
-	html, input { font-size:18px; font-family:Lato; transition:background 200ms ease-in; background:#fff; }
-	input:focus, input:hover { outline:none; background:#eee; }
+	html, input { font-size:18px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; transition:background 200ms ease-in; background:#fff; }
+	#input{ outline:none; background:#eee; width:96%; padding:2%; border-radius:6px; border-width:1px;width:100%; padding: 10px 17px; border-style:solid; -webkit-appearance:none; z-index:100; border:1px solid #000; }
 	hr { clear:both; margin: 36px -8px 10px; padding:0; background:#000; border:0; height:1px; }
-	input, dl { width:96%; padding:2%; border-radius:6px; border-width:1px; }
-	input { width:100%; padding: 10px 17px; border-style:solid; -webkit-appearance:none; z-index:100; border:1px solid #000; }
 	dd, dt { width:49%; float:left; margin:0; display:block; }
 	dd { text-align:right; }
 	ol { text-align:center; color:#666; padding:0; margin-top:14px; cursor:text; }
@@ -40,32 +67,32 @@
 	i { font-style:initial; vertical-align:2px; }
 	strong { font-weight: 100; padding-bottom: 4px; border-bottom: 1px solid #000; line-height: 60px; }
 	::selection { background:rgba(0,0,0,255); color:#fff; }
-	nav a { 
-		display:inline-block; 
+	nav a {
+		display:inline-block;
 		width:18px;
 		width:150px;
-		border:1px solid #000; 
-		outline:none !important; 
-		color:#000; 
-		text-decoration:none; 
-		text-align:center; 
-		background:#fff; 
-		padding:10px 17px; 
-		vertical-align:middle; 
-		border-radius:6px; 
+		border:1px solid #000;
+		outline:none !important;
+		color:#000;
+		text-decoration:none;
+		text-align:center;
+		background:#fff;
+		padding:10px 17px;
+		vertical-align:middle;
+		border-radius:6px;
 		margin:20px 24px 0 0;
 		box-shadow:0 0 14px 14px #fff;
 		user-select: none;
 	}
-	li { 
-		text-align:left; color:#000; 
-		margin-left:2em; 
-		padding:4px 1em; 
-		list-style-type:lower-roman;
+	li {
+		text-align:left; color:#000;
+		margin-left:2em;
+		padding:4px 1em;
+		list-style-type:decimal-leading-zero;
 		font-size:17px;
-		margin-bottom:3px; 
-		border: 1px solid rgba(255, 255, 255, 0); 
-		transition:border 400ms ease; 
+		margin-bottom:3px;
+		border: 1px solid rgba(255, 255, 255, 0);
+		transition:border 400ms ease;
 		border-radius:6px;
 	}
 	noscript, .no-js {
@@ -76,7 +103,7 @@
 		height:40px;
 		text-align:center;
 		background:#fff;
-		font-family:Consolas, monospace;
+		font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 		font-size:19px;
 		letter-spacing:2px;
 		padding:5px 0;
@@ -108,43 +135,249 @@
 
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="cipher.js"></script>
 <script src="data.js"></script>
 <script>
 input.oninput = function() {
-	setTimeout(function() {
-		a = 0;
+  setTimeout(function() {
+	  a = 0;
 
-		if (input.value !== "")
-			window.history.pushState('','','?' + "v=" + input.value);
-		else
-			window.history.pushState('','', window.location.protocol + "//" + window.location.host + window.location.pathname);
+	  if (input.value !== "")
+		  window.history.pushState('','','?' + "v=" + input.value);
+	  else
+		  window.history.pushState('','', window.location.protocol + "//" + window.location.host + window.location.pathname);
 
-		Object.keys(cipher).forEach(function(key) { a += ((input.value).split(key).length - 1)*cipher[key]; }); 
+	  Object.keys(cipher).forEach(function(key) { a += ((input.value).split(key).length - 1)*cipher[key]; });
 
-		if (/\d/.test(input.value))
-			a += ((input.value)).match(/\d+/g).map(Number).reduce(function(b, c) { return b + c; }, 0);
+	  if (/\d/.test(input.value))
+		  a += ((input.value)).match(/\d+/g).map(Number).reduce(function(b, c) { return b + c; }, 0);
 
-		result.innerHTML = a;
-			if (typeof naeq[a] !== 'undefined') {
-				count.innerHTML = naeq[a].length;
-				match.innerHTML = "";
-				Object.keys(naeq[a]).forEach(function(key) { 
-					match.innerHTML += "<li>" + naeq[a][key] + "</li>"; 
-				})
-			}
-			else {
-				count.innerHTML = 0;
-				match.innerHTML = "N/A";
-			}
-	}, 666);
+	  result.innerHTML = a;
+
+    var checkBox = document.getElementById("showextras");
+    if (checkBox.checked == false){
+	      /* CCXX */
+	        textset = liberccxx.split(" ");
+          matchescount = 0;
+          outputmatch = "";
+          teststr = "";
+          testword = "";
+          testchar = "";
+          teststrval = 0;
+          testweight = 0;
+          prevmatch = "";
+          prevoutput = "";
+          outskip = "";
+          if(a!==0) {
+              for(textpos=0;textpos<textset.length;textpos++) {
+                  teststr = "";
+                  teststrval = 0;
+                  testword = "";
+                  if(textpos+10>textset.length) {
+                      offend = textset.length;
+                  } else {
+                      offend = textpos+10;
+                  }
+                  for(offset=textpos;offset<offend;offset++) {
+                      testweight = 0;
+                      testword = textset[offset];
+                      for(subpos=0;subpos<testword.length;subpos++) {
+                          testchar = testword.substring(subpos,subpos+1);
+                          if(typeof cipher[testchar] !== 'undefined') {
+                              testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                          } else if(testchar == parseInt(testchar)) {
+                              testweight = parseInt(testweight) + parseInt(testchar);
+                          } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                      }
+                      if(parseInt(testword)==testword)
+                      {
+                        testweight = parseInt(testword);
+                      }
+                      var testwordasint = parseInt(testword);
+                      if(testwordasint.toString()+"."==testword && testword.substring(testword.length-1,testword.length)==".")
+                      {
+                        testweight = 0;
+                      }
+                      teststrval = parseInt(teststrval) + parseInt(testweight);
+                      if(teststr)
+                      {
+                        teststr = teststr + " " + testword;
+                      }
+                      else
+                      {
+                        teststr = testword;
+                      }
+                      if(teststrval==a)
+                      {
+                        if(prevmatch.length>0)
+                        {
+                          if(teststr.substring(0,prevmatch.length)!=prevmatch)
+                          {
+                            outskip=false;
+                            if(prevoutput.length>prevmatch.length)
+                            {
+                              if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                              {
+                                  outskip=true;
+                              }
+                            }
+                           if(!outskip)
+                            {
+                              matchescount++;
+                              outputmatch += "<li>"+prevmatch+"</li>";
+                              prevoutput = prevmatch;
+                              prevmatch="";
+                            }
+                          }
+                        }
+                        prevmatch = teststr;
+                      }
+                  }
+              }
+          }
+          if(prevmatch.length>0)
+          {
+            if(teststr.substring(0,prevmatch.length)!=prevmatch)
+            {
+              if(prevoutput.length>teststr.length)
+              {
+                if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                {
+                  outskip=true;
+                }
+              }
+            if(!outskip)
+            {
+              matchescount++;
+              outputmatch += "<li>"+prevmatch+"</li>";
+            }
+          }
+        }
+	      if (matchescount !== 0) {
+	          count.innerHTML = matchescount;
+	          match.innerHTML = outputmatch;
+
+	      } else {
+	        count.innerHTML = 0;
+		      match.innerHTML = "N/A";
+	      }
+    }
+    var checkBox = document.getElementById("showextras");
+    if (checkBox.checked == true){
+	      /* CCXX + Extra */
+	        textset = extras.split(" ");
+          matchescount = 0;
+          outputmatch = "";
+          teststr = "";
+          testword = "";
+          testchar = "";
+          teststrval = 0;
+          testweight = 0;
+          prevmatch = "";
+          prevoutput = "";
+          outskip = "";
+          if(a!==0) {
+              for(textpos=0;textpos<textset.length;textpos++) {
+                  teststr = "";
+                  teststrval = 0;
+                  testword = "";
+                  if(textpos+10>textset.length) {
+                      offend = textset.length;
+                  } else {
+                      offend = textpos+10;
+                  }
+                  for(offset=textpos;offset<offend;offset++) {
+                      testweight = 0;
+                      testword = textset[offset];
+                      for(subpos=0;subpos<testword.length;subpos++) {
+                          testchar = testword.substring(subpos,subpos+1);
+                          if(typeof cipher[testchar] !== 'undefined') {
+                              testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                          } else if(testchar == parseInt(testchar)) {
+                              testweight = parseInt(testweight) + parseInt(testchar);
+                          } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                      }
+                      if(parseInt(testword)==testword)
+                      {
+                        testweight = parseInt(testword);
+                      }
+                      var testwordasint = parseInt(testword);
+                      if(testwordasint.toString()+"."==testword && testword.substring(testword.length-1,testword.length)==".")
+                      {
+                        testweight = 0;
+                      }
+                      teststrval = parseInt(teststrval) + parseInt(testweight);
+                      if(teststr)
+                      {
+                        teststr = teststr + " " + testword;
+                      }
+                      else
+                      {
+                        teststr = testword;
+                      }
+                      if(teststrval==a)
+                      {
+                        if(prevmatch.length>0)
+                        {
+                          if(teststr.substring(0,prevmatch.length)!=prevmatch)
+                          {
+                            outskip=false;
+                            if(prevoutput.length>prevmatch.length)
+                            {
+                              if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                              {
+                                  outskip=true;
+                              }
+                            }
+                           if(!outskip)
+                            {
+                              matchescount++;
+                              outputmatch += "<li>"+prevmatch+"</li>";
+                              prevoutput = prevmatch;
+                              prevmatch="";
+                            }
+                          }
+                        }
+                        prevmatch = teststr;
+                      }
+                  }
+              }
+          }
+          if(prevmatch.length>0)
+          {
+            if(teststr.substring(0,prevmatch.length)!=prevmatch)
+            {
+              if(prevoutput.length>teststr.length)
+              {
+                if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                {
+                  outskip=true;
+                }
+              }
+            if(!outskip)
+            {
+              matchescount++;
+              outputmatch += "<li>"+prevmatch+"</li>";
+            }
+          }
+        }
+	      if (matchescount !== 0) {
+	          extrascount.innerHTML = matchescount;
+	          extrasmatches.innerHTML = outputmatch;
+
+	      } else {
+	        extrascount.innerHTML = 0;
+		      extrasmatches.innerHTML = "N/A";
+	      }
+      }
+  }, 666);
 }
-
-document.body.onload = function() { 
+document.body.onload = function() {
 	input.value = decodeURI(window.location.search).substring(3,128);
 	input.select();
 	input.dispatchEvent(new Event('input'));
 }
-
 </script>
 </body>
 </html>
