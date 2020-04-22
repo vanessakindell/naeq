@@ -140,236 +140,238 @@ function toggleBoxes() {
 <script src="data.js"></script>
 <script>
 input.oninput = function() {
-	a = 0;
+  setTimeout(function() {
+	  a = 0;
 
-	if (input.value !== "")
-		window.history.pushState('','','?' + "v=" + input.value);
-	else
-		window.history.pushState('','', window.location.protocol + "//" + window.location.host + window.location.pathname);
+	  if (input.value !== "")
+		  window.history.pushState('','','?' + "v=" + input.value);
+	  else
+		  window.history.pushState('','', window.location.protocol + "//" + window.location.host + window.location.pathname);
 
-	Object.keys(cipher).forEach(function(key) { a += ((input.value).split(key).length - 1)*cipher[key]; });
+	  Object.keys(cipher).forEach(function(key) { a += ((input.value).split(key).length - 1)*cipher[key]; });
 
-	if (/\d/.test(input.value))
-		a += ((input.value)).match(/\d+/g).map(Number).reduce(function(b, c) { return b + c; }, 0);
+	  if (/\d/.test(input.value))
+		  a += ((input.value)).match(/\d+/g).map(Number).reduce(function(b, c) { return b + c; }, 0);
 
-	result.innerHTML = a;
+	  result.innerHTML = a;
 
-var checkBox = document.getElementById("showextras");
-if (checkBox.checked == false){
-	  /* CCXX */
-	    textset = liberccxx.split(" ");
-      matchescount = 0;
-      outputmatch = "";
-      teststr = "";
-      testword = "";
-      testchar = "";
-      teststrval = 0;
-      testweight = 0;
-      prevmatch = "";
-      prevoutput = "";
-      outskip = "";
-      if(a!==0) {
-          for(textpos=0;textpos<textset.length;textpos++) {
-              teststr = "";
-              teststrval = 0;
-              testword = "";
-              if(textpos+10>textset.length) {
-                  offend = textset.length;
-              } else {
-                  offend = textpos+10;
-              }
-              for(offset=textpos;offset<offend;offset++) {
-                  testweight = 0;
-                  testword = textset[offset];
-                  for(subpos=0;subpos<testword.length;subpos++) {
-                      testchar = testword.substring(subpos,subpos+1);
-                      if(typeof cipher[testchar] !== 'undefined') {
-                          testweight = parseInt(testweight) + parseInt(cipher[testchar]);
-                      } else if(testchar == parseInt(testchar)) {
-                          testweight = parseInt(testweight) + parseInt(testchar);
-                      } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+    var checkBox = document.getElementById("showextras");
+    if (checkBox.checked == false){
+	      /* CCXX */
+	        textset = liberccxx.split(" ");
+          matchescount = 0;
+          outputmatch = "";
+          teststr = "";
+          testword = "";
+          testchar = "";
+          teststrval = 0;
+          testweight = 0;
+          prevmatch = "";
+          prevoutput = "";
+          outskip = "";
+          if(a!==0) {
+              for(textpos=0;textpos<textset.length;textpos++) {
+                  teststr = "";
+                  teststrval = 0;
+                  testword = "";
+                  if(textpos+10>textset.length) {
+                      offend = textset.length;
+                  } else {
+                      offend = textpos+10;
                   }
-                  if(parseInt(testword)==testword)
-                  {
-                    testweight = parseInt(testword);
-                  }
-                  var testwordasint = parseInt(testword);
-                  if(testwordasint.toString()+"."==testword && testword.substring(testword.length-1,testword.length)==".")
-                  {
-                    testweight = 0;
-                  }
-                  teststrval = parseInt(teststrval) + parseInt(testweight);
-                  if(teststr)
-                  {
-                    teststr = teststr + " " + testword;
-                  }
-                  else
-                  {
-                    teststr = testword;
-                  }
-                  if(teststrval==a)
-                  {
-                    if(prevmatch.length>0)
-                    {
-                      if(teststr.substring(0,prevmatch.length)!=prevmatch)
+                  for(offset=textpos;offset<offend;offset++) {
+                      testweight = 0;
+                      testword = textset[offset];
+                      for(subpos=0;subpos<testword.length;subpos++) {
+                          testchar = testword.substring(subpos,subpos+1);
+                          if(typeof cipher[testchar] !== 'undefined') {
+                              testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                          } else if(testchar == parseInt(testchar)) {
+                              testweight = parseInt(testweight) + parseInt(testchar);
+                          } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                      }
+                      if(parseInt(testword)==testword)
                       {
-                        outskip=false;
-                        if(prevoutput.length>prevmatch.length)
+                        testweight = parseInt(testword);
+                      }
+                      var testwordasint = parseInt(testword);
+                      if(testwordasint.toString()+"."==testword && testword.substring(testword.length-1,testword.length)==".")
+                      {
+                        testweight = 0;
+                      }
+                      teststrval = parseInt(teststrval) + parseInt(testweight);
+                      if(teststr)
+                      {
+                        teststr = teststr + " " + testword;
+                      }
+                      else
+                      {
+                        teststr = testword;
+                      }
+                      if(teststrval==a)
+                      {
+                        if(prevmatch.length>0)
                         {
-                          if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                          if(teststr.substring(0,prevmatch.length)!=prevmatch)
                           {
-                              outskip=true;
+                            outskip=false;
+                            if(prevoutput.length>prevmatch.length)
+                            {
+                              if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                              {
+                                  outskip=true;
+                              }
+                            }
+                           if(!outskip)
+                            {
+                              matchescount++;
+                              outputmatch += "<li>"+prevmatch+"</li>";
+                              prevoutput = prevmatch;
+                              prevmatch="";
+                            }
                           }
                         }
-                       if(!outskip)
-                        {
-                          matchescount++;
-                          outputmatch += "<li>"+prevmatch+"</li>";
-                          prevoutput = prevmatch;
-                          prevmatch="";
-                        }
+                        prevmatch = teststr;
                       }
-                    }
-                    prevmatch = teststr;
                   }
               }
           }
-      }
-      if(prevmatch.length>0)
-      {
-        if(teststr.substring(0,prevmatch.length)!=prevmatch)
-        {
-          if(prevoutput.length>teststr.length)
+          if(prevmatch.length>0)
           {
-            if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+            if(teststr.substring(0,prevmatch.length)!=prevmatch)
             {
-              outskip=true;
+              if(prevoutput.length>teststr.length)
+              {
+                if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                {
+                  outskip=true;
+                }
+              }
+            if(!outskip)
+            {
+              matchescount++;
+              outputmatch += "<li>"+prevmatch+"</li>";
             }
           }
-        if(!outskip)
-        {
-          matchescount++;
-          outputmatch += "<li>"+prevmatch+"</li>";
         }
-      }
-    }
-	  if (matchescount !== 0) {
-	      count.innerHTML = matchescount;
-	      match.innerHTML = outputmatch;
+	      if (matchescount !== 0) {
+	          count.innerHTML = matchescount;
+	          match.innerHTML = outputmatch;
 
-	  } else {
-	    count.innerHTML = 0;
-		  match.innerHTML = "N/A";
-	  }
-}
-var checkBox = document.getElementById("showextras");
-if (checkBox.checked == true){
-	  /* CCXX + Extra */
-	    textset = extras.split(" ");
-      matchescount = 0;
-      outputmatch = "";
-      teststr = "";
-      testword = "";
-      testchar = "";
-      teststrval = 0;
-      testweight = 0;
-      prevmatch = "";
-      prevoutput = "";
-      outskip = "";
-      if(a!==0) {
-          for(textpos=0;textpos<textset.length;textpos++) {
-              teststr = "";
-              teststrval = 0;
-              testword = "";
-              if(textpos+10>textset.length) {
-                  offend = textset.length;
-              } else {
-                  offend = textpos+10;
-              }
-              for(offset=textpos;offset<offend;offset++) {
-                  testweight = 0;
-                  testword = textset[offset];
-                  for(subpos=0;subpos<testword.length;subpos++) {
-                      testchar = testword.substring(subpos,subpos+1);
-                      if(typeof cipher[testchar] !== 'undefined') {
-                          testweight = parseInt(testweight) + parseInt(cipher[testchar]);
-                      } else if(testchar == parseInt(testchar)) {
-                          testweight = parseInt(testweight) + parseInt(testchar);
-                      } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+	      } else {
+	        count.innerHTML = 0;
+		      match.innerHTML = "N/A";
+	      }
+    }
+    var checkBox = document.getElementById("showextras");
+    if (checkBox.checked == true){
+	      /* CCXX + Extra */
+	        textset = extras.split(" ");
+          matchescount = 0;
+          outputmatch = "";
+          teststr = "";
+          testword = "";
+          testchar = "";
+          teststrval = 0;
+          testweight = 0;
+          prevmatch = "";
+          prevoutput = "";
+          outskip = "";
+          if(a!==0) {
+              for(textpos=0;textpos<textset.length;textpos++) {
+                  teststr = "";
+                  teststrval = 0;
+                  testword = "";
+                  if(textpos+10>textset.length) {
+                      offend = textset.length;
+                  } else {
+                      offend = textpos+10;
                   }
-                  if(parseInt(testword)==testword)
-                  {
-                    testweight = parseInt(testword);
-                  }
-                  var testwordasint = parseInt(testword);
-                  if(testwordasint.toString()+"."==testword && testword.substring(testword.length-1,testword.length)==".")
-                  {
-                    testweight = 0;
-                  }
-                  teststrval = parseInt(teststrval) + parseInt(testweight);
-                  if(teststr)
-                  {
-                    teststr = teststr + " " + testword;
-                  }
-                  else
-                  {
-                    teststr = testword;
-                  }
-                  if(teststrval==a)
-                  {
-                    if(prevmatch.length>0)
-                    {
-                      if(teststr.substring(0,prevmatch.length)!=prevmatch)
+                  for(offset=textpos;offset<offend;offset++) {
+                      testweight = 0;
+                      testword = textset[offset];
+                      for(subpos=0;subpos<testword.length;subpos++) {
+                          testchar = testword.substring(subpos,subpos+1);
+                          if(typeof cipher[testchar] !== 'undefined') {
+                              testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                          } else if(testchar == parseInt(testchar)) {
+                              testweight = parseInt(testweight) + parseInt(testchar);
+                          } else {outputmatch += "<li>ERROR: "+testchar+" NOT FOUND</li>";}
+                      }
+                      if(parseInt(testword)==testword)
                       {
-                        outskip=false;
-                        if(prevoutput.length>prevmatch.length)
+                        testweight = parseInt(testword);
+                      }
+                      var testwordasint = parseInt(testword);
+                      if(testwordasint.toString()+"."==testword && testword.substring(testword.length-1,testword.length)==".")
+                      {
+                        testweight = 0;
+                      }
+                      teststrval = parseInt(teststrval) + parseInt(testweight);
+                      if(teststr)
+                      {
+                        teststr = teststr + " " + testword;
+                      }
+                      else
+                      {
+                        teststr = testword;
+                      }
+                      if(teststrval==a)
+                      {
+                        if(prevmatch.length>0)
                         {
-                          if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                          if(teststr.substring(0,prevmatch.length)!=prevmatch)
                           {
-                              outskip=true;
+                            outskip=false;
+                            if(prevoutput.length>prevmatch.length)
+                            {
+                              if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                              {
+                                  outskip=true;
+                              }
+                            }
+                           if(!outskip)
+                            {
+                              matchescount++;
+                              outputmatch += "<li>"+prevmatch+"</li>";
+                              prevoutput = prevmatch;
+                              prevmatch="";
+                            }
                           }
                         }
-                       if(!outskip)
-                        {
-                          matchescount++;
-                          outputmatch += "<li>"+prevmatch+"</li>";
-                          prevoutput = prevmatch;
-                          prevmatch="";
-                        }
+                        prevmatch = teststr;
                       }
-                    }
-                    prevmatch = teststr;
                   }
               }
           }
-      }
-      if(prevmatch.length>0)
-      {
-        if(teststr.substring(0,prevmatch.length)!=prevmatch)
-        {
-          if(prevoutput.length>teststr.length)
+          if(prevmatch.length>0)
           {
-            if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+            if(teststr.substring(0,prevmatch.length)!=prevmatch)
             {
-              outskip=true;
+              if(prevoutput.length>teststr.length)
+              {
+                if(prevoutput.substring(prevoutput.length-prevmatch.length)==prevmatch)
+                {
+                  outskip=true;
+                }
+              }
+            if(!outskip)
+            {
+              matchescount++;
+              outputmatch += "<li>"+prevmatch+"</li>";
             }
           }
-        if(!outskip)
-        {
-          matchescount++;
-          outputmatch += "<li>"+prevmatch+"</li>";
         }
-      }
-    }
-	  if (matchescount !== 0) {
-	      extrascount.innerHTML = matchescount;
-	      extrasmatches.innerHTML = outputmatch;
+	      if (matchescount !== 0) {
+	          extrascount.innerHTML = matchescount;
+	          extrasmatches.innerHTML = outputmatch;
 
-	  } else {
-	    extrascount.innerHTML = 0;
-		  extrasmatches.innerHTML = "N/A";
-	  }
-  }
+	      } else {
+	        extrascount.innerHTML = 0;
+		      extrasmatches.innerHTML = "N/A";
+	      }
+      }
+  }, 666);
 }
 document.body.onload = function() {
 	input.value = decodeURI(window.location.search).substring(3,128);
