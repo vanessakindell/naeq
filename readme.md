@@ -20,6 +20,3 @@ Changes from upstream:
 -Various other quality of life changes.
 
 A live version of this branch can be found at http://secretcipher.xyz/
-
-
-TEST
