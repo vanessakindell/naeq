@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars3.githubusercontent.com/u/16767721?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="vanessakindell/secret-cipher" /><meta property="og:url" content="https://github.com/vanessakindell/secret-cipher" /><meta property="og:description" content="Secret Cipher Search. Contribute to vanessakindell/secret-cipher development by creating an account on GitHub." />
 
   <link rel="assets" href="https://github.githubassets.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NTI1MzYxMTQ1OjRmNWE0YWI0NGYyOThlNmZiNTdlNWY1MmQ0NmUxODA5Mjg2MDQ1ZjMzZjBlNTc3ZTM1N2I3NzRjMjBhNDI0NjE=--3ef2ee355e659c0fef95c23d107f0b25194f6a17">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NTI1MzYxMTQ1OjhlODViY2ZkYjY2MDAxMTU2MTVlZDRiOGNjYTI2MGQ2Zjk0Nzg4ODk4MjA5ZTAxNjM1ZmYxYWVlY2I1MzQ5Mjg=--bcac88943b93d0489f963e0e608dfdd77f0ad11a">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-  <meta name="request-id" content="CD36:584E:C65E5:160A7C:5E9FCC4C" data-pjax-transient="true" /><meta name="html-safe-nonce" content="df2043990610b15f663ee426bcb2b79e5a75723d" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS92YW5lc3Nha2luZGVsbC9zZWNyZXQtY2lwaGVyL3RyZWUvN2I0YWIyNGFmOTc0OWZkY2YzMmM5MTg0OWUzMmNlOGUwZjcyYzA1ZiIsInJlcXVlc3RfaWQiOiJDRDM2OjU4NEU6QzY1RTU6MTYwQTdDOjVFOUZDQzRDIiwidmlzaXRvcl9pZCI6IjU3MTY5Nzg2Njk0NzM2OTc5OTMiLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true" /><meta name="visitor-hmac" content="4b0f432b9337314e212f780f7c21bd29dadb0af23444395c3076d7597278b79d" data-pjax-transient="true" />
+  <meta name="request-id" content="D384:6205:1A579E:2A0D28:5E9FCCBE" data-pjax-transient="true" /><meta name="html-safe-nonce" content="df2043990610b15f663ee426bcb2b79e5a75723d" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS92YW5lc3Nha2luZGVsbC9zZWNyZXQtY2lwaGVyL3RyZWUvN2I0YWIyNGFmOTc0OWZkY2YzMmM5MTg0OWUzMmNlOGUwZjcyYzA1ZiIsInJlcXVlc3RfaWQiOiJEMzg0OjYyMDU6MUE1NzlFOjJBMEQyODo1RTlGQ0NCRSIsInZpc2l0b3JfaWQiOiI1NzE2OTc4NjY5NDczNjk3OTkzIiwicmVnaW9uX2VkZ2UiOiJpYWQiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="fbd5b6d848fc25448b40bb4bf00ec8ab3e19d12ef291f80c857539f715ca3885" data-pjax-transient="true" />
 
 
 
@@ -75,7 +75,7 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="ZGZmZTQ4MWNkM2RjYjRiNDNlYWQzNTExNzFlOTc5MzYwNjMyNDVjM2IxOGYwNWJlOTE2YTM2NTljMDE4MGE3MXx7InJlbW90ZV9hZGRyZXNzIjoiNzQuMTQwLjY0LjEyNyIsInJlcXVlc3RfaWQiOiJDRDM2OjU4NEU6QzY1RTU6MTYwQTdDOjVFOUZDQzRDIiwidGltZXN0YW1wIjoxNTg3NTMwODM4LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+      <meta name="js-proxy-site-detection-payload" content="NDg0OTYwYWQ5Nzg3YWExMDA5MzJhYzY4MDkzYTA3NWQyNzAyOGEzNGNmMTYyOTQxMDVhZjU3NzYzMjNhMGM0Y3x7InJlbW90ZV9hZGRyZXNzIjoiNzQuMTQwLjY0LjEyNyIsInJlcXVlc3RfaWQiOiJEMzg0OjYyMDU6MUE1NzlFOjJBMEQyODo1RTlGQ0NCRSIsInRpbWVzdGFtcCI6MTU4NzUzMDk0NSwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
 
     <meta name="enabled-features" content="MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PENDING_INSTALLATIONS,GHE_CLOUD_TRIAL,PAGE_STALE_CHECK">
 
@@ -164,7 +164,7 @@
           spellcheck="false"
           autocomplete="off"
           >
-          <input type="hidden" value="SXZNJJJ9fC2v4dtEUDNZ4L6QrXE1f7gzjKiTv3TXeEeIKrRxXds1LQryq44AHSgI8DZj44I9RDV4RmBbSjjGdA==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+          <input type="hidden" value="yfclANgOS2EZ2KAQB/ndI/WirAkLdrTUrii62acn4cAIq9xVF6gCYbzL0NpX16zLuwRim7w0SNJaxkk9mchf8w==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -315,7 +315,7 @@
       <img class="avatar avatar-user" height="20" width="20" alt="@vanessakindell" src="https://avatars0.githubusercontent.com/u/16767721?s=60&amp;u=8e6f619bc41772d53dac890ef28e159f53ca65b9&amp;v=4" />
       vanessakindell
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ywhjfRlOxHBC3jsLnRy2/6kllDAqrnkwMzt5ObT4S4z8YpE6hJD7ML8brqRzRaopmr3TP5RRfKXtcv25MNjXQw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="IG9121hsXd7kpAR2h+MBZM3AG/cZtECVESrQHBuZGz4XBYecxbJinhlhkdlpuh2y/lhc+KdLRQDPY1Scn7mH8Q==" />
       <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 17" version="1.1" width="16" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"></path></svg>
         Sign out
@@ -432,7 +432,7 @@
       </div>
     </summary>
     <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="DZScHLMErhoqAjeL9zZ0/tOEZkgd0g713wazdyKS6mTCVL+6So55gMS2JzCp82o/IuNj70gQ2fWlBsxE9LkhsA==" />
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="sou7YRHjiUbSj/tYhuMWmRaUoKEFD66PzQAz3STuodp9S5jH6Gle3Dw76+PYJghY5/OlBlDNeY+3AEzu8sVqDg==" />
         <div class="Box-header bg-gray border-bottom p-3">
           <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
             <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
@@ -550,17 +550,17 @@
       </li>
       <li class="dropdown-divider" role="none"></li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-04-22T01:17:18-04:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-04-22T01:19:05-04:00">
             in 30 minutes
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-04-22T01:47:18-04:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-04-22T01:49:05-04:00">
             in 1 hour
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-04-22T04:47:18-04:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-04-22T04:49:05-04:00">
             in 4 hours
           </button>
         </li>
@@ -629,12 +629,12 @@
 
     <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
     <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ThzJ7rV40pDlmBKU7CGWFr/BbdJt3p2elFBl7MYKQPp5djupKKbt0BhdhzsCeIrAjFkq3dMhmAtKGeFsQircNQ==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="KYAKoN6cr56iyezPPBkXutdZmcFEQnKlMeWHlpRY38ge6vjnQ0KQ3l8MeWDSQAts5MHezvq9dzDvrAMWEHhDBw==" />
       
       <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
         Sign out
       </button>
-      <input type="text" name="required_field_073c" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1587530838143" class="form-control" /><input type="hidden" name="timestamp_secret" value="3c70a02360721d7cf724d56c1213f449e7833aa72521f2c4ccc9d2cd10aa554f" class="form-control" />
+      <input type="text" name="required_field_a728" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1587530945046" class="form-control" /><input type="hidden" name="timestamp_secret" value="7a55fc77023f3c71ee514fbbbf5d028bce50b0e972146a6609420d0f4c2bd63e" class="form-control" />
 </form>  </details-menu>
 </details>
 
@@ -725,7 +725,7 @@
 
   <li>
     
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="CgGXQijaCUastq9LPnUxfGPf8DQq2YakzfhFvPcSeKX3iK+/yG3wLVRghbC2TcwDps45RbhQXd3PoXi3guq/YQ==" />      <input type="hidden" name="repository_id" value="208710419">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="MRicrGAFA5+k9aJW+eWX/0JjLjJQgBDzrL+ThwCQxjbMkaRRgLL69FwjiK1x3WqAh3LnQ8IJy4qu5q6MdWgB8g==" />      <input type="hidden" name="repository_id" value="208710419">
 
       <details class="details-reset details-overlay select-menu float-left">
         <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:208710419,&quot;originating_url&quot;:&quot;https://github.com/vanessakindell/secret-cipher/blob/7b4ab24af9749fdcf32c91849e32ce8e0f72c05f/readme.md&quot;,&quot;user_id&quot;:16767721}}" data-hydro-click-hmac="15f8e16b381069e56f5f403d67d7bc0c4e900e274caed2862c4226d8d6c96ded" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
@@ -799,7 +799,7 @@
 
   <li>
       <div class="js-toggler-container js-social-container starring-container ">
-    <form class="starred js-social-form" action="/vanessakindell/secret-cipher/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="9HjLvVoXAcOhQZzsIqQSgsAP/79AvwNZibsflooJ9bhas2HgIEFd11owlnkj/juJYs6XN7rxb/s318c05M/2hw==" />
+    <form class="starred js-social-form" action="/vanessakindell/secret-cipher/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="NSlB+CILlsZ0JoTUrXht7gxXFDnrsygBcEyM66GU83ub4uulWF3K0o9XjkGsIkTlrpZ8sRH9RKPOIFRJz1LwRA==" />
       <input type="hidden" name="context" value="repository"></input>
       <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar vanessakindell/secret-cipher" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:208710419,&quot;originating_url&quot;:&quot;https://github.com/vanessakindell/secret-cipher/blob/7b4ab24af9749fdcf32c91849e32ce8e0f72c05f/readme.md&quot;,&quot;user_id&quot;:16767721}}" data-hydro-click-hmac="d8c4c1532cbd759949d2e1d856a2ca2d2e9a7c16fe9fe645f77979d5df03bb13" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
 
@@ -809,7 +809,7 @@
            1
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/vanessakindell/secret-cipher/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="QBhCflXyLCVJVeW2cf/fjdo2VScHXPpNSIarJRgZej0a6zkutRhfOqrsZWsYByxaJcvfykjtbjvPgzWpTash+Q==" />
+    <form class="unstarred js-social-form" action="/vanessakindell/secret-cipher/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="eTZiC1BxnmKy6wcIIf91sLsdRKfLm7HvPJBkCPxzTW0jxRlbsJvtfVFSh9VIB4ZnRODOSoQqJZm7lfqEqcEWqQ==" />
       <input type="hidden" name="context" value="repository"></input>
       <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star vanessakindell/secret-cipher" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:208710419,&quot;originating_url&quot;:&quot;https://github.com/vanessakindell/secret-cipher/blob/7b4ab24af9749fdcf32c91849e32ce8e0f72c05f/readme.md&quot;,&quot;user_id&quot;:16767721}}" data-hydro-click-hmac="e4a64d7f24dadc8810e5c73c2c1d3f71c26fa9f4885b0f1f817270d1066c427d" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
 
@@ -1015,53 +1015,16 @@
 
 
 
-    
-  <div class="Box Box--condensed d-flex flex-column flex-shrink-0 mb-3">
-      <div class="Box-body d-flex flex-justify-between bg-blue-light flex-column flex-md-row flex-items-start flex-md-items-center">
-        <span class="pr-md-4 f6">
-          <a rel="author" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/vanessakindell/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/vanessakindell"><img class="avatar avatar-user" src="https://avatars2.githubusercontent.com/u/16767721?s=40&amp;v=4" width="20" height="20" alt="@vanessakindell" /></a>
-          <a class="text-bold link-gray-dark lh-default v-align-middle" rel="author" data-hovercard-type="user" data-hovercard-url="/users/vanessakindell/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/vanessakindell">vanessakindell</a>
-            <span class="lh-default v-align-middle">
-              <a data-pjax="true" title="Update readme.md" class="link-gray" href="/vanessakindell/secret-cipher/commit/7b4ab24af9749fdcf32c91849e32ce8e0f72c05f">Update readme.md</a>
-            </span>
-        </span>
-        <span class="d-inline-block flex-shrink-0 v-align-bottom f6 mt-2 mt-md-0">
-          <a class="pr-2 text-mono link-gray" href="/vanessakindell/secret-cipher/commit/7b4ab24af9749fdcf32c91849e32ce8e0f72c05f" data-pjax>7b4ab24</a>
-          <relative-time datetime="2020-04-22T04:08:27Z" class="no-wrap">Apr 22, 2020</relative-time>
-        </span>
+    <include-fragment src="/vanessakindell/secret-cipher/contributors/7b4ab24af9749fdcf32c91849e32ce8e0f72c05f/readme.md" class="Box Box--condensed commit-loader">
+      <div class="Box-body bg-blue-light f6">
+        Fetching contributors&hellip;
       </div>
 
-    <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap" >
-      <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
-        <summary class="btn-link">
-          <span><strong>2</strong> contributors</span>
-        </summary>
-        <details-dialog
-          class="Box Box--overlay d-flex flex-column anim-fade-in fast"
-          aria-label="Users who have contributed to this file"
-          src="/vanessakindell/secret-cipher/contributors-list/master/readme.md" preload>
-          <div class="Box-header">
-            <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
-              <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
-            </button>
-            <h3 class="Box-title">
-              Users who have contributed to this file
-            </h3>
-          </div>
-          <include-fragment class="octocat-spinner my-3" aria-label="Loading..."></include-fragment>
-        </details-dialog>
-      </details>
-        <span class="">
-    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/users/vanessakindell/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/vanessakindell/secret-cipher/commits/master/readme.md?author=vanessakindell">
-      <img class="avatar mr-1 avatar-user" src="https://avatars2.githubusercontent.com/u/16767721?s=40&amp;v=4" width="20" height="20" alt="@vanessakindell" /> 
-</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/users/offalynne/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/vanessakindell/secret-cipher/commits/master/readme.md?author=offalynne">
-      <img class="avatar mr-1 avatar-user" src="https://avatars3.githubusercontent.com/u/16347732?s=40&amp;v=4" width="20" height="20" alt="@offalynne" /> 
-</a>
-</span>
-
-    </div>
-  </div>
-
+      <div class="Box-body d-flex flex-items-center" >
+        <img alt="" class="loader-loading mr-2" src="https://github.githubassets.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
+        <span class="text-red h6 loader-error">Cannot retrieve contributors at this time</span>
+      </div>
+</include-fragment>
 
 
 
