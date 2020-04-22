@@ -9,3 +9,11 @@ greetings, sourceror
     A live version of this branch can be found at http://secretcipher.xyz/minimal/
 
 @vnessymusic
+
+Changes from original:  
+-Adds Greek Isopsephy and Hebrew Gematria support.  
+-Adds limited Latan character set support.  
+-Reduces needed changes in the text.  
+-Adds real-time text parsing  
+-Adds line number and chapter number included "Extras" search for Liber Al vel Legis  
+-Various other quality of life changes.
