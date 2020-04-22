@@ -18,3 +18,5 @@ Changes from upstream:
 -Adds real-time text parsing  
 -Adds line number and chapter number included "Extras" search for Liber Al vel Legis  
 -Various other quality of life changes.
+
+A live version of this branch can be found at http://secretcipher.xyz/
