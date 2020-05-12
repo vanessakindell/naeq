@@ -1,260 +1,41 @@
 <html>
 <head>
-  <title>Secret Cipher Search</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+<title>Secret Cipher Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body style="opacity:0" onload="toggleBoxes()">
-<noscript>JavaScript Required</noscript>
+<body>
+<p style="text-align: center;"></p><table align="center" style="text-align: center;">
+  <tr>
+    <h1 style="text-align: center;">Secret Cipher Search</h1>
+    <td><br></td>
+    <td><br></td>
+		<td><a href="thelema"><image src="images/unicursal.svg" alt="Unicursal Hexagram" style="width:100px;height:100px;"></a><br>The Holy Books<br>of Thelema</td>
+    <td><br></td>
+    <td><br></td>
+  </tr>
+  <tr>
+    <td><a href="tanakh"><image src="images/Hexagram.svg" alt="Hexaram" style="width:100px;height:100px;"></a><br>The<br>Tanach</td>
+    <td><br></td>
+		<td><a href="bible"><image src="images/Chi-Rho.svg" alt="Chi-Rho" style="width:100px;height:100px;"></a><br>The<br>Bible</td>
+    <td><br></td>
+    <td><a href="quran"><image src="images/star_and_crescent.svg" alt="Star and Crescent" style="width:100px;height:100px;"></a><br>The<br>Quran</td>
+	</tr>
+  <tr>
+    <td><br></td>
+    <td><br></td>
+    <td><a href="fortean"><image src="images/93.svg" alt="93 Sigil" style="width:100px;height:100px;"></a><br>Fortian<br>Phrases</td>
+    <td><br></td>
+    <td><br></td>
+  </tr>
+</table></p>
+<br>
 <div class="top" id="head">
-<form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
-<dl>
-<div><dt>NAEQ Sum</dt><dd id="result">0</dd></div>
-<hr>
-<div><dt>Matches:</dt></div>
-
-<div><dt><input type="checkbox" id="showliberi"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber I</dt><dd id="icount">0</dd></div>
-<div><dt><input type="checkbox" id="showlibervii"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber VII</dt><dd id="viicount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber X</dt><dd id="xcount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberxxvii"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber XXVII</dt><dd id="xxviicount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberxlix"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber XLIX</dt><dd id="xlixcount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberlxv"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber LXV</dt><dd id="lxvcount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberlxvi"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber LXVI</dt><dd id="lxvicount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberxc"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber XC</dt><dd id="xccount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberclvi"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber CLVI</dt><dd id="clvicount">0</dd></div>
-
-<div><dt><input type="checkbox" id="showliberccxx"  onclick="toggleBoxes()" checked style="height:5px;width:5px;">Liber CCXX  <input type="checkbox" id="showenumeration"  onclick="toggleBoxes()" style="height:5px;width:5px;"> Extra</dt><div id="ccxxcountoutput"  style="display:inline;"><dd id="ccxxcount">0</dd></div><div id="enumerationcountoutput" style="display:none;"><dd id="enumerationcount">0</dd></div></div>
-
-<div><dt><input type="checkbox" id="showliberccclxx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber CCCLXX</dt><dd id="ccclxxcount">0</dd></div>
-<div><dt><input type="checkbox" id="showliberdlxx"  onclick="toggleBoxes()" style="height:5px;width:5px;">Liber DLXX</dt><dd id="dlxxcount">0</dd></div>
-<div><dt><input type="checkbox" id="showforteanphrases"  onclick="toggleBoxes()" style="height:5px;width:5px;">Fortean Phrases</dt><dd id="forteanphrasescount">0</dd></div>
-
-<div class="out" id="liberi" style="display:none;"><strong>Liber I: B vel Magi</strong><div><ol id="imatch">N/A</ol></div></div>
-<div class="out" id="libervii" style="display:none;"><strong>Liber VII: Liberi vel Lapidis Lazuli</strong><div><ol id="viimatch">N/A</ol></div></div>
-<div class="out" id="liberx" style="display:none;"><strong>Liber X: Liber Porta Lucis</strong><div><ol id="xmatch">N/A</ol></div></div>
-<div class="out" id="liberxxvii" style="display:none;"><strong>Liber XXVII: Trigrammaton</strong><div><ol id="xxviimatch">N/A</ol></div></div>
-<div class="out" id="liberxlix" style="display:none;"><strong>Liber XLIX: Babalon</strong><div><ol id="xlixmatch">N/A</ol></div></div>
-<div class="out" id="liberlxv" style="display:none;"><strong>Liber LXV: Cordis Cincti Serpente</strong><div><ol id="lxvmatch">N/A</ol></div></div>
-<div class="out" id="liberlxvi" style="display:none;"><strong>Liber LXVI Stellæ Rubeæ</strong><div><ol id="lxvimatch">N/A</ol></div></div>
-<div class="out" id="liberxc" style="display:none;"><strong>Liber XC: Tzaddi vel Hamus Hermeticus</strong><div><ol id="xcmatch">N/A</ol></div></div>
-<div class="out" id="liberclvi" style="display:none;"><strong>Liber CLVI: Cheth vel Vallum Abiegni</strong><div><ol id="clvimatch">N/A</ol></div></div>
-<div class="out" id="liberccxx" style="display:block;"><strong>Liber CCXX: Al Vel Legis</strong><div><ol id="ccxxmatch">N/A</ol></div></div>
-<div class="out" id="enumeration" style="display:none;"><strong>Liber CCXX: Al Vel Legis + Extra</strong><div><ol id="enumerationmatch">N/A</ol></div></div>
-<div class="out" id="liberccclxx" style="display:none;"><strong>Liber CCCLXX: A’ash vel Capricorni Pneumatici</strong><div><ol id="ccclxxmatch">N/A</ol></div></div>
-<div class="out" id="liberdlxx" style="display:none;"><strong>Liber DLXX: ARARITA</strong><div><ol id="dlxxmatch">N/A</ol></div></div>
-<div class="out" id="forteanphrases" style="display:none;"><strong>Common Fortean Phrases</strong><div><ol id="forteanphrasesmatch">N/A</ol></div></div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-   toggleBoxes();
-}, false);
-function toggleBoxes() {
-  var checkBox = document.getElementById("showliberi");
-  var div = document.getElementById("liberi");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showlibervii");
-  var div = document.getElementById("libervii");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberx");
-  var div = document.getElementById("liberx");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberxxvii");
-  var div = document.getElementById("liberxxvii");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberxlix");
-  var div = document.getElementById("liberxlix");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberlxv");
-  var div = document.getElementById("liberlxv");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberlxvi");
-  var div = document.getElementById("liberlxvi");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberxc");
-  var div = document.getElementById("liberxc");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberclvi");
-  var div = document.getElementById("liberclvi");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberccxx");
-  var checkBoxE = document.getElementById("showenumeration");
-  var div = document.getElementById("liberccxx");
-  var divE = document.getElementById("enumeration");
-  var divO = document.getElementById("ccxxcountoutput");
-  var divEO = document.getElementById("enumerationcountoutput");
-  if (checkBox.checked == true && checkBoxE.checked == false){
-    div.style.display = "block";
-    divO.style.display = "inline";
-    divE.style.display = "none";
-    divEO.style.display = "none";
-  } else if (checkBox.checked == true && checkBoxE.checked == true){
-    div.style.display = "none";
-    divO.style.display = "none";
-    divE.style.display = "block";
-    divEO.style.display = "inline";
-  } else {
-    div.style.display = "none";
-    divO.style.display = "inline";
-    divE.style.display = "none";
-    divEO.style.display = "none";
-  }
-
-  var checkBox = document.getElementById("showliberccclxx");
-  var div = document.getElementById("liberccclxx");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showliberdlxx");
-  var div = document.getElementById("liberdlxx");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  var checkBox = document.getElementById("showforteanphrases");
-  var div = document.getElementById("forteanphrases");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-  input.dispatchEvent(new Event('input'));
-}
-</script>
-</dl>
 <nav>
 	<a href="about"> <span>About</span></a>
-	<a href="https://www.amazon.com/Complete-SECRET-CIPHER-UfOnauts/dp/171864535X/ref=sr_1_1"><span> Get the Book</span></a>
+	<a href="https://www.amazon.com/Complete-SECRET-CIPHER-UfOnauts/dp/171864535X/ref=sr_1_1"><span>Get the Book</span></a>
 </nav>
 </div>
-
-<!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">-->
-<style>
-	html { overflow-y:scroll; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; }
-	html, body { margin:0; padding:0; animation:fade-in 800ms normal forwards; position:relative; background:#fff; }
-	html, input { font-size:18px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; transition:background 200ms ease-in; background:#fff; }
-	#input{ outline:none; background:#eee; width:96%; padding:2%; border-radius:6px; border-width:1px;width:100%; padding: 10px 17px; border-style:solid; -webkit-appearance:none; z-index:100; border:1px solid #000; }
-	hr { clear:both; margin: 36px -8px 10px; padding:0; background:#000; border:0; height:1px; }
-	dd, dt { width:49%; float:left; margin:0; display:block; }
-	dd { text-align:right; }
-	ol { text-align:center; color:#666; padding:0; margin-top:14px; cursor:text; }
-	li:hover, li:focus-within { border-color:#aaa; cursor:; }
-	div { clear:both; }
-	nav { position:fixed; bottom:40px; z-index:100; text-align:right; user-select: none; }
-	nav a:hover, nav a:focus { background:#eee; }
-	nav a span { padding-left:12px; }
-	i { font-style:initial; vertical-align:2px; }
-	strong { font-weight: 100; padding-bottom: 4px; border-bottom: 1px solid #000; line-height: 60px; }
-	::selection { background:rgba(0,0,0,255); color:#fff; }
-	nav a {
-		display:inline-block;
-		width:18px;
-		width:150px;
-		border:1px solid #000;
-		outline:none !important;
-		color:#000;
-		text-decoration:none;
-		text-align:center;
-		background:#fff;
-		padding:10px 17px;
-		vertical-align:middle;
-		border-radius:6px;
-		margin:20px 24px 0 0;
-		box-shadow:0 0 14px 14px #fff;
-		user-select: none;
-	}
-	li {
-		text-align:left; color:#000;
-		margin-left:2em;
-		padding:4px 1em;
-		list-style-type:decimal-leading-zero;
-		font-size:17px;
-		margin-bottom:3px;
-		border: 1px solid rgba(255, 255, 255, 0);
-		transition:border 400ms ease;
-		border-radius:6px;
-	}
-	noscript, .no-js {
-		display:block;
-		position:absolute;
-		top:0px;
-		width:100%;
-		height:40px;
-		text-align:center;
-		background:#fff;
-		font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-		font-size:19px;
-		letter-spacing:2px;
-		padding:5px 0;
-	}
-	.top {
-		padding:0 5%;
-		max-width:400px;
-		margin:100px auto 120px;
-		background:#fff;
-	}
-	.out {
-		text-align:center;
-		margin:30px 0 50px;
-	}
-	.top:after {
-		content:" ";
-		background:linear-gradient(rgba(255,255,255,0), #fff);
-		height:200px;
-		width:100%;
-		display:block;
-		position:fixed;
-		left:0;
-		bottom:0;
-	}
-	@keyframes fade-in {
-		from {opacity:0;}
-		to {opacity:1;}
-	}
-
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="cipher.js"></script>
-<script src="data.js"></script>
-<script src="results.js"></script>
 </body>
-</html>
