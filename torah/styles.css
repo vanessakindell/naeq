@@ -1,0 +1,81 @@
+	html { overflow-y:scroll; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; }
+	html, body { margin:0; padding:0; animation:fade-in 800ms normal forwards; position:relative; background:#fff; }
+	html, input { font-size:18px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; transition:background 200ms ease-in; background:#fff; }
+	#input{ outline:none; background:#eee; width:96%; padding:2%; border-radius:6px; border-width:1px;width:100%; padding: 10px 17px; border-style:solid; -webkit-appearance:none; z-index:100; border:1px solid #000; }
+	hr { clear:both; margin: 36px -8px 10px; padding:0; background:#000; border:0; height:1px; }
+	dd, dt { width:49%; float:left; margin:0; display:block; }
+	dd { text-align:right; }
+	ol { text-align:center; color:#666; padding:0; margin-top:14px; cursor:text; }
+	li:hover, li:focus-within { border-color:#aaa; cursor:; }
+	div { clear:both; }
+	nav { position:fixed; bottom:40px; z-index:100; text-align:right; user-select: none; }
+	nav a:hover, nav a:focus { background:#eee; }
+	nav a span { padding-left:12px; }
+	i { font-style:initial; vertical-align:2px; }
+	strong { font-weight: 100; padding-bottom: 4px; border-bottom: 1px solid #000; line-height: 60px; }
+	::selection { background:rgba(0,0,0,255); color:#fff; }
+	nav a {
+		display:inline-block;
+		width:18px;
+		width:150px;
+		border:1px solid #000;
+		outline:none !important;
+		color:#000;
+		text-decoration:none;
+		text-align:center;
+		background:#fff;
+		padding:10px 17px;
+		vertical-align:middle;
+		border-radius:6px;
+		margin:20px 24px 0 0;
+		box-shadow:0 0 14px 14px #fff;
+		user-select: none;
+	}
+	li {
+		text-align:left; color:#000;
+		margin-left:2em;
+		padding:4px 1em;
+		list-style-type:decimal-leading-zero;
+		font-size:17px;
+		margin-bottom:3px;
+		border: 1px solid rgba(255, 255, 255, 0);
+		transition:border 400ms ease;
+		border-radius:6px;
+	}
+	noscript, .no-js {
+		display:block;
+		position:absolute;
+		top:0px;
+		width:100%;
+		height:40px;
+		text-align:center;
+		background:#fff;
+		font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+		font-size:19px;
+		letter-spacing:2px;
+		padding:5px 0;
+	}
+	.top {
+		padding:0 5%;
+		max-width:400px;
+		margin:100px auto 120px;
+		background:#fff;
+	}
+	.out {
+		text-align:center;
+		margin:30px 0 50px;
+	}
+	.top:after {
+		content:" ";
+		background:linear-gradient(rgba(255,255,255,0), #fff);
+		height:200px;
+		width:100%;
+		display:block;
+		position:fixed;
+		left:0;
+		bottom:0;
+	}
+	@keyframes fade-in {
+		from {opacity:0;}
+		to {opacity:1;}
+	}
