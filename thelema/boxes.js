@@ -30,13 +30,6 @@ function toggleBoxes() {
   } else {
     div.style.display = "none";
   }
-  var checkBox = document.getElementById("showliberxlix");
-  var div = document.getElementById("liberxlix");
-  if (checkBox.checked == true){
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
   var checkBox = document.getElementById("showliberlxv");
   var div = document.getElementById("liberlxv");
   if (checkBox.checked == true){
@@ -102,5 +95,37 @@ function toggleBoxes() {
   } else {
     div.style.display = "none";
   }
+
+  var checkBox = document.getElementById("showliberccccxviii");
+  var div = document.getElementById("liberccccxviii");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showlibercdxv");
+  var div = document.getElementById("libercdxv");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+
+  var checkBox = document.getElementById("showliberdcccclxii");
+  var div = document.getElementById("liberdcccclxii");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+
+  var checkBox = document.getElementById("showliberlxi");
+  var div = document.getElementById("liberlxi");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+
   input.dispatchEvent(new Event('input'));
 }
