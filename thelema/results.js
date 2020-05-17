@@ -638,10 +638,10 @@ input.oninput = function() {
                 teststr = "";
                 teststrval = 0;
                 testword = "";
-                if(textpos+10>textset.length) {
+                if(textpos+20>textset.length) {
                     offend = textset.length;
                 } else {
-                    offend = textpos+10;
+                    offend = textpos+20;
                 }
                 for(offset=textpos;offset<offend;offset++) {
                     testweight = 0;
