@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Thelma NAEQ Search</title>
+  <title>Babalon NAEQ Search</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
@@ -16,8 +16,11 @@
 <hr>
 <div><dt>Matches:</dt></div>
 <div><dt><br></dt></div>
-<div><dt>Liber XLIX</dt><dd id="xlixcount">0</dd></div>
-<div class="out" id="liberxlix" style="display:block;"><strong>Liber XLIX: Babalon</strong><div><ol id="xlixmatch">N/A</ol></div></div>
+<div><dt><input type="checkbox" id="showliberxlix"  onclick="toggleBoxes()" checked style="height:5px;width:5px;">Liber XLIX</dt><dd id="xlixcount">0</dd></div>
+<div><dt><input type="checkbox" id="showfortitude"  onclick="toggleBoxes()" checked style="height:5px;width:5px;">Fortitude</dt><dd id="fortcount">0</dd></div>
+<hr>
+<div class="out" id="liberxlix" style="display:none;"><strong>Liber XLIX: The Book of Babalon</strong><div><ol id="xlixmatch">N/A</ol></div></div>
+<div class="out" id="fortitude" style="display:none;"><strong>The Daughter of Fortitude</strong><div><ol id="fortmatch">N/A</ol></div></div>
 </dl>
 <nav>
 	<a href="../"> <span>Back</span></a>
@@ -25,8 +28,8 @@
 </nav>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="boxes.js"></script>
 <script src="data.js"></script>
-<script src="data2.js"></script>
 <script src="results.js"></script>
 <script src="../cipher.js"></script>
 </body>
