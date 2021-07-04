@@ -14,8 +14,10 @@ input.oninput = function() {
 
 	    result.innerHTML = a;
 
-	    /* Bible */
-	    textset = bible.split(" ");
+    var checkBox = document.getElementById("showmatthew");
+    if (checkBox.checked == true){
+    	    /* Matthew */
+	      textset = matthew.split(" ");
         matchescount = 0;
         outputmatch = "";
         teststr = "";
@@ -65,13 +67,197 @@ input.oninput = function() {
             }
         }
 	    if (matchescount !== 0) {
-	        count.innerHTML = matchescount;
-	        match.innerHTML = outputmatch;
+	        matthewcount.innerHTML = matchescount;
+	        matthewmatch.innerHTML = outputmatch;
 
 	    } else {
-        count.innerHTML = 0;
-		    match.innerHTML = "N/A";
+	      matthewcount.innerHTML = 0;
+		    matthewmatch.innerHTML = "N/A";
 	    }
+    }
+    var checkBox = document.getElementById("showmark");
+    if (checkBox.checked == true){
+	    /* Mark */
+	      textset = mark.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        markcount.innerHTML = matchescount;
+	        markmatch.innerHTML = outputmatch;
+
+	    } else {
+	      markcount.innerHTML = 0;
+		    markmatch.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showluke");
+    if (checkBox.checked == true){
+    	    /* Luke */
+	      textset = luke.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        lukecount.innerHTML = matchescount;
+	        lukematch.innerHTML = outputmatch;
+
+	    } else {
+	      lukecount.innerHTML = 0;
+		    lukematch.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showjohn");
+    if (checkBox.checked == true){
+    	    /* John */
+	      textset = john.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        johncount.innerHTML = matchescount;
+	        johnmatch.innerHTML = outputmatch;
+
+	    } else {
+	      johncount.innerHTML = 0;
+		    johnmatch.innerHTML = "N/A";
+	    }
+    }
   }, 666);
 }
 

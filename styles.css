@@ -1,10 +1,8 @@
-	html { overflow-y:scroll; font-family:Lato; }
+	html { overflow-y:scroll; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; }
 	html, body { margin:0; padding:0; animation:fade-in 800ms normal forwards; position:relative; background:#fff; }
-	html, input { font-size:18px; font-family:Lato; transition:background 200ms ease-in; background:#fff; }
-	input:focus, input:hover { outline:none; background:#eee; }
+	html, input { font-size:18px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; transition:background 200ms ease-in; background:#fff; }
+	#input{ outline:none; background:#eee; width:96%; padding:2%; border-radius:6px; border-width:1px;width:100%; padding: 10px 17px; border-style:solid; -webkit-appearance:none; z-index:100; border:1px solid #000; }
 	hr { clear:both; margin: 36px -8px 10px; padding:0; background:#000; border:0; height:1px; }
-	input, dl { width:96%; padding:2%; border-radius:6px; border-width:1px; }
-	input { width:100%; padding: 10px 17px; border-style:solid; -webkit-appearance:none; z-index:100; border:1px solid #000; }
 	dd, dt { width:49%; float:left; margin:0; display:block; }
 	dd { text-align:right; }
 	ol { text-align:center; color:#666; padding:0; margin-top:14px; cursor:text; }
@@ -52,7 +50,7 @@
 		height:40px;
 		text-align:center;
 		background:#fff;
-		font-family:Consolas, monospace;
+		font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 		font-size:19px;
 		letter-spacing:2px;
 		padding:5px 0;

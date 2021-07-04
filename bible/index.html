@@ -1,34 +1,46 @@
 <html>
 <head>
-  <title>Bible Isopsephy Search</title>
+  <title>The New Testament KJV Search</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">-->
 </head>
 <body onload="toggleBoxes()">
 <noscript>JavaScript Required</noscript>
 <div class="top" id="head">
-  <h1 style="text-align: center;">Search Coming Soon</h1>
 <form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
 <dl>
 <div><dt>Sum</dt><dd id="result">0</dd></div>
 <hr>
-<div><dt>Matches:</dt><dd id="count">0</dd></div>
+<div><dt>Matches</dt></div>
+<div><dt><br></dt></div>
+<div><dt><b style="text-align: left;">Gospels</b></dt></div>
+<div><dt><input type="checkbox" id="showmatthew"  onclick="toggleBoxes()" style="height:19px;width:19px;">Matthew</dt><dd id="matthewcount">0</dd></div>
+<div><dt><input type="checkbox" id="showmark"  onclick="toggleBoxes()" style="height:19px;width:19px;">Mark</dt><dd id="markcount">0</dd></div>
+<div><dt><input type="checkbox" id="showluke"  onclick="toggleBoxes()" style="height:19px;width:19px;">Luke</dt><dd id="lukecount">0</dd></div>
+<div><dt><input type="checkbox" id="showjohn"  onclick="toggleBoxes()" style="height:19px;width:19px;">John</dt><dd id="johncount">0</dd></div>
 
-<div class="out" id=""><strong>Results</strong><div><ol id="match">N/A</ol></div></div>
+<hr>
+<div class="out" style="display:block;"><h3>Gospels</h3></div>
+<div class="out" id="Matthew" style="display:block;"><strong>Matthew</strong><div><ol id="matthewmatch">N/A</ol></div></div>
+<div class="out" id="Mark" style="display:block;"><strong>Mark</strong><div><ol id="markmatch">N/A</ol></div></div>
+<div class="out" id="Luke" style="display:block;"><strong>Luke</strong><div><ol id="lukematch">N/A</ol></div></div>
+<div class="out" id="John" style="display:block;"><strong>John</strong><div><ol id="johnmatch">N/A</ol></div></div>
+
 </dl>
-
 <nav>
 	<a href="../"> <span>Back</span></a>
 	<a href="https://www.amazon.com/Complete-SECRET-CIPHER-UfOnauts/dp/171864535X/ref=sr_1_1"><span>Get the Book</span></a>
 </nav>
-
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="data.js"></script>
+<script src="boxes.js"></script>
+<script src="matthew.js"></script>
+<script src="mark.js"></script>
+<script src="luke.js"></script>
+<script src="john.js"></script>
 <script src="results.js"></script>
 <script src="../cipher.js"></script>
 </body>
