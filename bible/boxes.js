@@ -125,6 +125,69 @@ function toggleBoxes() {
   } else {
     div.style.display = "none";
   }
+  var checkBox = document.getElementById("showhebrews");
+  var div = document.getElementById("Hebrews");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showjames");
+  var div = document.getElementById("James");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showpeter1");
+  var div = document.getElementById("Peter1");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showpeter2");
+  var div = document.getElementById("Peter2");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showjohn1");
+  var div = document.getElementById("John1");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showjohn2");
+  var div = document.getElementById("John2");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showjohn3");
+  var div = document.getElementById("John3");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showjude");
+  var div = document.getElementById("Jude");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+  var checkBox = document.getElementById("showrevelations");
+  var div = document.getElementById("Revelations");
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
   input.dispatchEvent(new Event('input'));
 }
 document.addEventListener('DOMContentLoaded', function() {

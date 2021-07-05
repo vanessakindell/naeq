@@ -1112,6 +1112,555 @@ input.oninput = function() {
 		    philemonmatch.innerHTML = "N/A";
 	    }
     }
+    var checkBox = document.getElementById("showhebrews");
+    if (checkBox.checked == true){
+    	    /* Hebrews */
+	      textset = hebrews.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        hebrewscount.innerHTML = matchescount;
+	        hebrewsmatch.innerHTML = outputmatch;
+
+	    } else {
+	      hebrewscount.innerHTML = 0;
+		    hebrewsmatch.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showjames");
+    if (checkBox.checked == true){
+    	    /* James */
+	      textset = james.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        jamescount.innerHTML = matchescount;
+	        jamesmatch.innerHTML = outputmatch;
+
+	    } else {
+	      jamescount.innerHTML = 0;
+		    jamesmatch.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showpeter1");
+    if (checkBox.checked == true){
+    	    /* 1 Peter */
+	      textset = peter1.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        peter1count.innerHTML = matchescount;
+	        peter1match.innerHTML = outputmatch;
+
+	    } else {
+	      peter1count.innerHTML = 0;
+		    peter1match.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showpeter2");
+    if (checkBox.checked == true){
+    	    /* 2 Peter */
+	      textset = peter2.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        peter2count.innerHTML = matchescount;
+	        peter2match.innerHTML = outputmatch;
+
+	    } else {
+	      peter2count.innerHTML = 0;
+		    peter2match.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showjohn1");
+    if (checkBox.checked == true){
+    	    /* 1 John */
+	      textset = john1.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        john1count.innerHTML = matchescount;
+	        john1match.innerHTML = outputmatch;
+
+	    } else {
+	      john1count.innerHTML = 0;
+		    john1match.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showjohn2");
+    if (checkBox.checked == true){
+    	    /* 2 John */
+	      textset = john2.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        john2count.innerHTML = matchescount;
+	        john2match.innerHTML = outputmatch;
+
+	    } else {
+	      john2count.innerHTML = 0;
+		    john2match.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showjohn3");
+    if (checkBox.checked == true){
+    	    /* 3 John */
+	      textset = john3.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        john3count.innerHTML = matchescount;
+	        john3match.innerHTML = outputmatch;
+
+	    } else {
+	      john3count.innerHTML = 0;
+		    john3match.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showjude");
+    if (checkBox.checked == true){
+    	    /* Jude */
+	      textset = jude.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        judecount.innerHTML = matchescount;
+	        judematch.innerHTML = outputmatch;
+
+	    } else {
+	      judecount.innerHTML = 0;
+		    judematch.innerHTML = "N/A";
+	    }
+    }
+    var checkBox = document.getElementById("showrevelations");
+    if (checkBox.checked == true){
+    	    /* Revelations */
+	      textset = revelations.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+10>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+10;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        revelationscount.innerHTML = matchescount;
+	        revelationsmatch.innerHTML = outputmatch;
+
+	    } else {
+	      revelationscount.innerHTML = 0;
+		    revelationsmatch.innerHTML = "N/A";
+	    }
+    }
   }, 666);
 }
 
