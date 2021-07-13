@@ -1,0 +1,119 @@
+<html>
+<head>
+  <title>Torah Gematria Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="../styles.css">
+  <!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">-->
+</head>
+<body onload="toggleBoxes()">
+<noscript>JavaScript Required</noscript>
+<div class="top" id="head">
+<form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
+<dl>
+<div><dt>Sum</dt><dd id="result">0</dd></div>
+<hr>
+<div><dt>Matches</dt></div>
+<div><dt><br></dt></div>
+<div><dt><b style="text-align: left;">Torah</b></dt></div>
+<div><dt><input type="checkbox" id="showgenesis"  onclick="toggleBoxes()" checked style="height:19px;width:19px;">Genesis</dt><dd id="genesiscount">0</dd></div>
+<div><dt><input type="checkbox" id="showexodus"  onclick="toggleBoxes()" checked style="height:19px;width:19px;">Exodus</dt><dd id="exoduscount">0</dd></div>
+<div><dt><input type="checkbox" id="showleviticus"  onclick="toggleBoxes()" checked style="height:19px;width:19px;">Leviticus</dt><dd id="leviticuscount">0</dd></div>
+<div><dt><input type="checkbox" id="shownumbers"  onclick="toggleBoxes()" checked style="height:19px;width:19px;">Numbers</dt><dd id="numberscount">0</dd></div>
+<div><dt><input type="checkbox" id="showduteronomy"  onclick="toggleBoxes()" checked style="height:19px;width:19px;">Deuteronomy</dt><dd id="duteronomycount">0</dd></div>
+<div><dt><br></dt></div>
+<div><dt><b style="text-align: left;">Prophets</b></dt></div>
+<div><dt><input type="checkbox" id="showjoshua"  onclick="toggleBoxes()" style="height:19px;width:19px;">Joshua</dt><dd id="joshuacount">0</dd></div>
+<div><dt><input type="checkbox" id="showjudges"  onclick="toggleBoxes()" style="height:19px;width:19px;">Judges</dt><dd id="judgescount">0</dd></div>
+<div><dt><input type="checkbox" id="showsamuel1"  onclick="toggleBoxes()" style="height:19px;width:19px;">1 Samuel</dt><dd id="samuel1count">0</dd></div>
+<div><dt><input type="checkbox" id="showsamuel2"  onclick="toggleBoxes()" style="height:19px;width:19px;">2 Samuel</dt><dd id="samuel2count">0</dd></div>
+<div><dt><input type="checkbox" id="showkings1"  onclick="toggleBoxes()" style="height:19px;width:19px;">1 Kings</dt><dd id="kings1count">0</dd></div>
+<div><dt><input type="checkbox" id="showkings2"  onclick="toggleBoxes()" style="height:19px;width:19px;">2 Kings</dt><dd id="kings2count">0</dd></div>
+<div><dt><input type="checkbox" id="showisaiah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Isaiah</dt><dd id="isaiahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showjeremiah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Jeremiah</dt><dd id="jeremiahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showezekiel"  onclick="toggleBoxes()" style="height:19px;width:19px;">Ezekiel</dt><dd id="ezekielcount">0</dd></div>
+<div><dt><input type="checkbox" id="showhosea"  onclick="toggleBoxes()" style="height:19px;width:19px;">Hosea</dt><dd id="hoseacount">0</dd></div>
+<div><dt><input type="checkbox" id="showjoel"  onclick="toggleBoxes()" style="height:19px;width:19px;">Joel</dt><dd id="joelcount">0</dd></div>
+<div><dt><input type="checkbox" id="showamos"  onclick="toggleBoxes()" style="height:19px;width:19px;">Amos</dt><dd id="amoscount">0</dd></div>
+<div><dt><input type="checkbox" id="showobadiah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Obadiah</dt><dd id="obadiahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showjonah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Jonah</dt><dd id="jonahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showmicah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Micah</dt><dd id="micahcount">0</dd></div>
+<div><dt><input type="checkbox" id="shownahum"  onclick="toggleBoxes()" style="height:19px;width:19px;">Nahum</dt><dd id="nahumcount">0</dd></div>
+<div><dt><input type="checkbox" id="showhabakkuk"  onclick="toggleBoxes()" style="height:19px;width:19px;">Habakkuk</dt><dd id="habakkukcount">0</dd></div>
+<div><dt><input type="checkbox" id="showzephaniah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Zephaniah</dt><dd id="zephaniahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showhaggai"  onclick="toggleBoxes()" style="height:19px;width:19px;">Haggai</dt><dd id="haggaicount">0</dd></div>
+<div><dt><input type="checkbox" id="showzechariah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Zechariah</dt><dd id="zechariahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showmalachi"  onclick="toggleBoxes()" style="height:19px;width:19px;">Malachi</dt><dd id="malachicount">0</dd></div>
+<div><dt><br></dt></div>
+<div><dt><b style="text-align: left;">Writings</b></dt></div>
+<div><dt><input type="checkbox" id="showpsalms"  onclick="toggleBoxes()" style="height:19px;width:19px;">Psalms</dt><dd id="psalmscount">0</dd></div>
+<div><dt><input type="checkbox" id="showproverbs"  onclick="toggleBoxes()" style="height:19px;width:19px;">Proverbs</dt><dd id="proverbscount">0</dd></div>
+<div><dt><input type="checkbox" id="showjob"  onclick="toggleBoxes()" style="height:19px;width:19px;">Job</dt><dd id="jobcount">0</dd></div>
+<div><dt><input type="checkbox" id="showsongofsongs"  onclick="toggleBoxes()" style="height:19px;width:19px;">Song of Songs</dt><dd id="songofsongscount">0</dd></div>
+<div><dt><input type="checkbox" id="showruth"  onclick="toggleBoxes()" style="height:19px;width:19px;">Ruth</dt><dd id="ruthcount">0</dd></div>
+<div><dt><input type="checkbox" id="showlamentations"  onclick="toggleBoxes()" style="height:19px;width:19px;">Lamentations</dt><dd id="lamentationscount">0</dd></div>
+<div><dt><input type="checkbox" id="showecclesiastes"  onclick="toggleBoxes()" style="height:19px;width:19px;">Ecclesiastes</dt><dd id="ecclesiastescount">0</dd></div>
+<div><dt><input type="checkbox" id="showesther"  onclick="toggleBoxes()" style="height:19px;width:19px;">Esther</dt><dd id="esthercount">0</dd></div>
+<div><dt><input type="checkbox" id="showdaniel"  onclick="toggleBoxes()" style="height:19px;width:19px;">Daniel</dt><dd id="danielcount">0</dd></div>
+<div><dt><input type="checkbox" id="showezra"  onclick="toggleBoxes()" style="height:19px;width:19px;">Ezra</dt><dd id="ezracount">0</dd></div>
+<div><dt><input type="checkbox" id="shownehemiah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Nehemiah</dt><dd id="nehemiahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showchronicles1"  onclick="toggleBoxes()" style="height:19px;width:19px;">1 Chronicles</dt><dd id="chronicles1count">0</dd></div>
+<div><dt><input type="checkbox" id="showchronicles2"  onclick="toggleBoxes()" style="height:19px;width:19px;">2 Chronicles</dt><dd id="chronicles2count">0</dd></div>
+
+<div class="out" id="genesis" style="display:none;"><strong>Genesis</strong><div><ol id="genesismatch">N/A</ol></div></div>
+<div class="out" id="exodus" style="display:none;"><strong>Exodus</strong><div><ol id="exodusmatch">N/A</ol></div></div>
+<div class="out" id="leviticus" style="display:none;"><strong>Leviticus</strong><div><ol id="leviticusmatch">N/A</ol></div></div>
+<div class="out" id="numbers" style="display:none;"><strong>Numbers</strong><div><ol id="numbersmatch">N/A</ol></div></div>
+<div class="out" id="duteronomy" style="display:none;"><strong>Deuteronomy</strong><div><ol id="duteronomymatch">N/A</ol></div></div>
+<div class="out" id="joshua" style="display:none;"><strong>Joshua</strong><div><ol id="joshuamatch">N/A</ol></div></div>
+<div class="out" id="judges" style="display:none;"><strong>Judges</strong><div><ol id="judgesmatch">N/A</ol></div></div>
+<div class="out" id="samuel1" style="display:none;"><strong>1 Samuel</strong><div><ol id="samuel1match">N/A</ol></div></div>
+<div class="out" id="samuel2" style="display:none;"><strong>2 Samuel</strong><div><ol id="samuel2match">N/A</ol></div></div>
+<div class="out" id="kings1" style="display:none;"><strong>1 Kings</strong><div><ol id="kings1match">N/A</ol></div></div>
+<div class="out" id="kings2" style="display:none;"><strong>2 Kings</strong><div><ol id="kings2match">N/A</ol></div></div>
+<div class="out" id="isaiah" style="display:none;"><strong>Isaiah</strong><div><ol id="isaiahmatch">N/A</ol></div></div>
+<div class="out" id="jeremiah" style="display:none;"><strong>Jeremiah</strong><div><ol id="jeremiahmatch">N/A</ol></div></div>
+<div class="out" id="ezekiel" style="display:none;"><strong>Ezekiel</strong><div><ol id="ezekielmatch">N/A</ol></div></div>
+<div class="out" id="hosea" style="display:none;"><strong>Hosea</strong><div><ol id="hoseamatch">N/A</ol></div></div>
+<div class="out" id="joel" style="display:none;"><strong>Joel</strong><div><ol id="joelmatch">N/A</ol></div></div>
+<div class="out" id="amos" style="display:none;"><strong>Amos</strong><div><ol id="amosmatch">N/A</ol></div></div>
+<div class="out" id="obadiah" style="display:none;"><strong>Obadiah</strong><div><ol id="obadiahmatch">N/A</ol></div></div>
+<div class="out" id="jonah" style="display:none;"><strong>Jonah</strong><div><ol id="jonahmatch">N/A</ol></div></div>
+<div class="out" id="micah" style="display:none;"><strong>Micah</strong><div><ol id="micahmatch">N/A</ol></div></div>
+<div class="out" id="nahum" style="display:none;"><strong>Nahum</strong><div><ol id="nahummatch">N/A</ol></div></div>
+<div class="out" id="habakkuk" style="display:none;"><strong>Habakkuk</strong><div><ol id="habakkukmatch">N/A</ol></div></div>
+<div class="out" id="zephaniah" style="display:none;"><strong>Zephaniah</strong><div><ol id="zephaniahmatch">N/A</ol></div></div>
+<div class="out" id="haggai" style="display:none;"><strong>Haggai</strong><div><ol id="haggaimatch">N/A</ol></div></div>
+<div class="out" id="zechariah" style="display:none;"><strong>Zechariah</strong><div><ol id="zechariahmatch">N/A</ol></div></div>
+<div class="out" id="malachi" style="display:none;"><strong>Malachi</strong><div><ol id="malachimatch">N/A</ol></div></div>
+<div class="out" id="psalms" style="display:none;"><strong>Psalms</strong><div><ol id="psalmsmatch">N/A</ol></div></div>
+<div class="out" id="proverbs" style="display:none;"><strong>Proverbs</strong><div><ol id="proverbsmatch">N/A</ol></div></div>
+<div class="out" id="job" style="display:none;"><strong>Job</strong><div><ol id="jobmatch">N/A</ol></div></div>
+<div class="out" id="songofsongs" style="display:none;"><strong>Song of Songs</strong><div><ol id="songofsongsmatch">N/A</ol></div></div>
+<div class="out" id="ruth" style="display:none;"><strong>Ruth</strong><div><ol id="ruthmatch">N/A</ol></div></div>
+<div class="out" id="lamentations" style="display:none;"><strong>Lamentations</strong><div><ol id="lamentationsmatch">N/A</ol></div></div>
+<div class="out" id="ecclesiastes" style="display:none;"><strong>Ecclesiastes</strong><div><ol id="ecclesiastesmatch">N/A</ol></div></div>
+<div class="out" id="esther" style="display:none;"><strong>Esther</strong><div><ol id="esthermatch">N/A</ol></div></div>
+<div class="out" id="daniel" style="display:none;"><strong>Daniel</strong><div><ol id="danielmatch">N/A</ol></div></div>
+<div class="out" id="ezra" style="display:none;"><strong>Ezra</strong><div><ol id="ezramatch">N/A</ol></div></div>
+<div class="out" id="nehemiah" style="display:none;"><strong>Nehemiah</strong><div><ol id="nehemiahmatch">N/A</ol></div></div>
+<div class="out" id="chronicles1" style="display:none;"><strong>1 Chronicles</strong><div><ol id="chronicles1match">N/A</ol></div></div>
+<div class="out" id="chronicles2" style="display:none;"><strong>2 Chronicles</strong><div><ol id="chronicles2match">N/A</ol></div></div>
+
+</dl>
+<nav>
+	<a href="../"> <span>Back</span></a>
+	<a href="https://www.amazon.com/gp/product/1578191122/ref=ppx_yo_dt_b_asin_title_o05_s00"><span>Get the Book</span></a>
+</nav>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="boxes.js"></script>
+<script src="torah.js"></script>
+<script src="prophets1.js"></script>
+<script src="prophets2.js"></script>
+<script src="writings.js"></script>
+<script src="results.js"></script>
+<script src="../cipher.js"></script>
+</body>
+</html>
