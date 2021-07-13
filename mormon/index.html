@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>The Book of  Mormon Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="../styles.css">
+  <!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">-->
+</head>
+<body onload="toggleBoxes()">
+<noscript>JavaScript Required</noscript>
+<div class="top" id="head">
+<form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
+<dl>
+<div><dt>Sum</dt><dd id="result">0</dd></div>
+<hr>
+<div><dt>Matches</dt></div>
+<div><dt><br></dt></div>
+<div><dt><input type="checkbox" id="show1nephi"  onclick="toggleBoxes()" style="height:19px;width:19px;">1 Nephi</dt><dd id="nephi1count">0</dd></div>
+<div><dt><input type="checkbox" id="show2nephi"  onclick="toggleBoxes()" style="height:19px;width:19px;">2 Nephi</dt><dd id="nephi2count">0</dd></div>
+<div><dt><input type="checkbox" id="showjacob"  onclick="toggleBoxes()" style="height:19px;width:19px;">Jacob</dt><dd id="jacobcount">0</dd></div>
+<div><dt><input type="checkbox" id="showenos"  onclick="toggleBoxes()" style="height:19px;width:19px;">Enos</dt><dd id="enoscount">0</dd></div>
+<div><dt><input type="checkbox" id="showjarom"  onclick="toggleBoxes()" style="height:19px;width:19px;">Jarom</dt><dd id="jaromcount">0</dd></div>
+<div><dt><input type="checkbox" id="showomni"  onclick="toggleBoxes()" style="height:19px;width:19px;">Omni</dt><dd id="omnicount">0</dd></div>
+<div><dt><input type="checkbox" id="showwordsmormon"  onclick="toggleBoxes()" style="height:19px;width:19px;">Words of Mormon</dt><dd id="wordsmormoncount">0</dd></div>
+<div><dt><input type="checkbox" id="showmosiah"  onclick="toggleBoxes()" style="height:19px;width:19px;">Mosiah</dt><dd id="mosiahcount">0</dd></div>
+<div><dt><input type="checkbox" id="showalma"  onclick="toggleBoxes()" style="height:19px;width:19px;">Alma</dt><dd id="almacount">0</dd></div>
+<div><dt><input type="checkbox" id="showhelaman"  onclick="toggleBoxes()" style="height:19px;width:19px;">Helaman</dt><dd id="helamancount">0</dd></div>
+<div><dt><input type="checkbox" id="show3nephi"  onclick="toggleBoxes()" style="height:19px;width:19px;">3 Nephi</dt><dd id="nephi3count">0</dd></div>
+<div><dt><input type="checkbox" id="show4nephi"  onclick="toggleBoxes()" style="height:19px;width:19px;">4 Nephi</dt><dd id="nephi4count">0</dd></div>
+<div><dt><input type="checkbox" id="showmormon"  onclick="toggleBoxes()" style="height:19px;width:19px;">Mormon</dt><dd id="mormoncount">0</dd></div>
+<div><dt><input type="checkbox" id="showether"  onclick="toggleBoxes()" style="height:19px;width:19px;">Ether</dt><dd id="ethercount">0</dd></div>
+<div><dt><input type="checkbox" id="showmoroni"  onclick="toggleBoxes()" style="height:19px;width:19px;">Moroni</dt><dd id="moronicount">0</dd></div>
+
+<hr>
+<div class="out" id="1Nephi" style="display:block;"><strong>The First Book of Nephi</strong><div><ol id="nephi1match">N/A</ol></div></div>
+<div class="out" id="2Nephi" style="display:block;"><strong>The Second Book of Nephi</strong><div><ol id="nephi2match">N/A</ol></div></div>
+<div class="out" id="Jacob" style="display:block;"><strong>The Book of Jacob</strong><div><ol id="jacobmatch">N/A</ol></div></div>
+<div class="out" id="Enos" style="display:block;"><strong>The Book of Enos</strong><div><ol id="enosmatch">N/A</ol></div></div>
+<div class="out" id="Jarom" style="display:block;"><strong>The Book of Jarom</strong><div><ol id="jarommatch">N/A</ol></div></div>
+<div class="out" id="Omni" style="display:block;"><strong>The Book of Omni</strong><div><ol id="omnimatch">N/A</ol></div></div>
+<div class="out" id="WordsMormon" style="display:block;"><strong>The Words of Mormon</strong><div><ol id="wordsmormonmatch">N/A</ol></div></div>
+<div class="out" id="Mosiah" style="display:block;"><strong>The Book of Mosiah</strong><div><ol id="mosiahmatch">N/A</ol></div></div>
+<div class="out" id="Alma" style="display:block;"><strong>The Book of Alma</strong><div><ol id="almamatch">N/A</ol></div></div>
+<div class="out" id="Helaman" style="display:block;"><strong>The Book of Helaman</strong><div><ol id="helamanmatch">N/A</ol></div></div>
+<div class="out" id="3Nephi" style="display:block;"><strong>The Third Book of Nephi</strong><div><ol id="nephi3match">N/A</ol></div></div>
+<div class="out" id="4Nephi" style="display:block;"><strong>The Fourth Book of Nephi</strong><div><ol id="nephi4match">N/A</ol></div></div>
+<div class="out" id="Mormon" style="display:block;"><strong>The Book of Mormon</strong><div><ol id="mormonmatch">N/A</ol></div></div>
+<div class="out" id="Ether" style="display:block;"><strong>The Book of Ether</strong><div><ol id="ethermatch">N/A</ol></div></div>
+<div class="out" id="Moroni" style="display:block;"><strong>The Book of Moroni</strong><div><ol id="moronimatch">N/A</ol></div></div>
+
+</dl>
+<nav>
+	<a href="../"> <span>Back</span></a>
+	<a href="https://www.amazon.com/Complete-SECRET-CIPHER-UfOnauts/dp/171864535X/ref=sr_1_1"><span>Get the Book</span></a>
+</nav>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="boxes.js"></script>
+<script src="results.js"></script>
+<script src="../cipher.js"></script>
+
+<script src="1nephi.js"></script>
+<script src="2nephi.js"></script>
+<script src="jacob.js"></script>
+<script src="enos.js"></script>
+<script src="jarom.js"></script>
+<script src="omni.js"></script>
+<script src="wordsmormon.js"></script>
+<script src="mosiah.js"></script>
+<script src="alma.js"></script>
+<script src="helaman.js"></script>
+<script src="3nephi.js"></script>
+<script src="4nephi.js"></script>
+<script src="mormon.js"></script>
+<script src="ether.js"></script>
+<script src="moroni.js"></script>
+
+</body>
+</html>
