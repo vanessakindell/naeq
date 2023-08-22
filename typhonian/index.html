@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Typhonian Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="../styles.css">
+  <!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">-->
+</head>
+<body onload="toggleBoxes()">
+<noscript>JavaScript Required</noscript>
+<div class="top" id="head">
+<form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
+<dl>
+<div><dt>Sum</dt><dd id="result">0</dd></div>
+<hr>
+<div><dt>Matches</dt></div>
+<div><dt><br></dt></div>
+<div><dt><input type="checkbox" id="showipsos"  onclick="toggleBoxes()" checked style="height:19px;width:19px;">Pennae Praenumbra</dt><dd id="ipsoscount">0</dd></div>
+<div><dt><input type="checkbox" id="showslba"  onclick="toggleBoxes()" checked style="height:19px;width:19px;">Wisdom of S'lba</dt><dd id="slbacount">0</dd></div>
+<hr>
+<div class="out" id="ipsos" style="display:none;"><strong>Liber Pennae Praenumbra</strong><div><ol id="ipsosmatch">N/A</ol></div></div>
+<div class="out" id="slba" style="display:none;"><strong>Wisdom of S'lba</strong><div><ol id="slbamatch">N/A</ol></div></div>
+</dl>
+<nav>
+	<a href="../"> <span>Back</span></a>
+	<a href="https://www.amazon.com/Complete-SECRET-CIPHER-UfOnauts/dp/171864535X/ref=sr_1_1"><span>Get the Book</span></a>
+</nav>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="boxes.js"></script>
+<script src="data.js"></script>
+<script src="results.js"></script>
+<script src="../cipher.js"></script>
+</body>
+</html>
