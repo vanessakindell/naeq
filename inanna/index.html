@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Wisdom of Inanna Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="../styles.css">
+  <!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">-->
+</head>
+<body onload="toggleBoxes()">
+<noscript>JavaScript Required</noscript>
+<div class="top" id="head">
+<form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
+<dl>
+<div><dt>Sum</dt><dd id="result">0</dd></div>
+<hr>
+<div><dt>Matches</dt><dd id="count">0</dd></div>
+
+<div class="out" id=""><strong>Results</strong><div><ol id="match">N/A</ol></div></div>
+</dl>
+
+<nav>
+	<a href="../"> <span>Back</span></a>
+	<a href="https://www.amazon.com/Tajweed-Meaning-Translation-Transliteration-English/dp/993390020X/ref=sr_1_1"><span> Get the Book</span></a>
+</nav>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="data.js"></script>
+<script src="results.js"></script>
+<script src="../cipher.js"></script>
+</body>
+</html>
